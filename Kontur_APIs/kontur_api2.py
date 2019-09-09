@@ -35,9 +35,6 @@ class TOrganization():
     creationDate   = '' #
     hasEvotorOffer = '' #
 
-    SalesPoints = [] # Списка точек продаж организации
-    Kkts = []
-
 class TKontur():
     ofd_api_key  = '' # ключ интегратора
     SID          = '' #
@@ -50,6 +47,8 @@ class TKontur():
     authStatusCode = '' # код статуса авторизации
 
     Organizations  = []
+    SalesPoints    = []  # Списка точек продаж организации
+    Kkts           = []
 
     def __init__(self):
         """Constructor"""
@@ -76,16 +75,13 @@ class TKontur():
             h               = httplib2.Http('.cache')
             (resp, content) = h.request(uri=url_str, method='GET', headers=self.cookies)
 
-            # print (resp)
-            #print (content.decode("utf-8"))
-
             if str(resp.status) == '200':
                 json_obj = json.loads(content.decode("utf-8"))
                 for item in json_obj:
                     Organization                = TOrganization()
                     Organization.id             = item ['id']
                     Organization.inn            = item ['inn']
-                    Organization.kpp            = item ['kpp']
+                    #Organization.kpp            = item ['kpp']
                     Organization.shortName      = item ['shortName']
                     Organization.fullName       = item ['fullName']
                     Organization.isBlocked      = item ['isBlocked']
@@ -109,7 +105,7 @@ class TKontur():
                     SalesPoint.id             = item['id']
                     SalesPoint.name           = item['name']
 
-                    org.SalesPoints.append(SalesPoint)
+                    self.SalesPoints.append(SalesPoint)
 
     def get_cashboxes(self):
         # метод cashboxes (https://kontur-ofd-api.readthedocs.io/ru/latest/http/cashboxes.html)
@@ -132,12 +128,12 @@ class TKontur():
                     Kkt.salesPointId   = item['salesPointPeriods'][0]['salesPointId'] # !!! поидеи надо в цикле дёргать
                     Kkt.fnSerialNumber = item['fnEntity']['serialNumber']
 
-                    for sp in org.SalesPoints:
-                        if Kkt.salesPointId == sp.id:
-                            Kkt.salesPointName = sp.name
-                            break
+                    #for sp in org.SalesPoints:
+                    #    if Kkt.salesPointId == sp.id:
+                    #        Kkt.salesPointName = sp.name
+                    #        break
 
-                    org.Kkts.append(Kkt)
+                    self.Kkts.append(Kkt)
 
     def get_cashboxes_xlsx(self):
         for org in self.Organizations:
@@ -155,7 +151,7 @@ class TKontur():
             #xlsxWs = xlsxWb.active
 
             for i in range(2, ws.max_row+1):
-                for kkt in org.Kkts:
+                for kkt in self.Kkts:
 
                     if kkt.regNumber == str(ws.cell(row=i, column=2).value):
                         #print (ws.cell(row=i, column=4).value)
@@ -201,18 +197,33 @@ Kontur.get_cashboxes_xlsx()
 
 #
 
-# Вывод ККТ организации
-#for org in Kontur.Organizations:
-#    print (org.shortName)
-#    for kkt in org.Kkts:
-#        print ('  ' + kkt.salesPointName + ' - ('+kkt.regNumber +')')
+f = open('log.html', 'w')
+f.write('<html>')
+f.write('<body>')
 
-# Вывод ККТ организации в разрезе точек продаж
 for org in Kontur.Organizations:
     print (org.shortName)
-    for sp in org.SalesPoints:
-        print ('  '+sp.name)
-        for kkt in org.Kkts:
-            if sp.id == kkt.salesPointId:
-                print ('    '+kkt.regNumber)
-                print ('      ' + kkt.endPay)
+    f.write('<h1>'+org.shortName+'</h1>')
+    for sp in Kontur.SalesPoints:
+        if sp.organizationId == org.id:
+            print ('  '+sp.name)
+            f.write('<h3>' + sp.name + '</h3>')
+
+            f.write('<table border="1" cellpadding="5" cellspacing="0">')
+            f.write('<tr>')
+            f.write('<th>Reg namber</th>')
+            f.write('<th>End pay</th>')
+            f.write('</tr>')
+            for kkt in Kontur.Kkts:
+                if (kkt.organizationId == org.id) and (kkt.salesPointId == sp.id):
+                    f.write('<tr>')
+                    print ('    ' + kkt.regNumber)
+                    print ('    ' + kkt.endPay)
+                    f.write('<td>' + kkt.regNumber + '</td>')
+                    f.write('<td>' + kkt.endPay + '</td>')
+                    f.write('</tr>')
+            f.write('</table>')
+
+f.write('</body>')
+f.write('</html>')
+f.close()
