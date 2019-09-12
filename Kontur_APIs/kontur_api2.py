@@ -10,15 +10,20 @@ import json
 import openpyxl
 
 class TKkt():
-    regNumber      = '' #
-    name           = '' #
-    serialNumber   = '' #
-    organizationId = '' #
-    modelName      = '' #
-    salesPointId   = '' #
-    salesPointName = '' #
-    fnSerialNumber = '' #
-    endPay         = ''  #
+    regNumber      = '' # Регистрациооный номер
+    name           = '' # имя ККТ
+    serialNumber   = '' # Заводской номер ККТ
+    organizationId = '' # id организации
+    modelName      = '' # Название модели
+    salesPointId   = '' # id точки продаж
+    fnSerialNumber = '' # Заводской номер ФН
+    ffd            = '' # из xlsx "ФФД"
+    state          = '' # из xlsx "Состояние ККТ"
+    lastDoc        = '' # из xlsx "Последний документ"
+    lastDocDate    = '' # из xlsx "Дата последнего документа"
+    endPay         = '' # из xlsx "Оплата"
+    ofd            = '' # из xlsx "ОФД"
+    fnChangeDate   = '' # из xlsx "Срок замены ФН"
 
 class TSalesPoint():
     organizationId = '' # id Организации за которой закреплена данная точка продаж
@@ -81,11 +86,11 @@ class TKontur():
                     Organization                = TOrganization()
                     Organization.id             = item ['id']
                     Organization.inn            = item ['inn']
-                    #Organization.kpp            = item ['kpp']
+                    #Organization.kpp            = item ['kpp'] # нет у ИП
                     Organization.shortName      = item ['shortName']
                     Organization.fullName       = item ['fullName']
                     Organization.isBlocked      = item ['isBlocked']
-                    Organization.creationDate   = item ['creationDate']
+                    #Organization.creationDate   = item ['creationDate'] # нет у пустой организации
                     Organization.hasEvotorOffer = item ['hasEvotorOffer']
                     self.Organizations.append (Organization)
 
@@ -128,11 +133,6 @@ class TKontur():
                     Kkt.salesPointId   = item['salesPointPeriods'][0]['salesPointId'] # !!! поидеи надо в цикле дёргать
                     Kkt.fnSerialNumber = item['fnEntity']['serialNumber']
 
-                    #for sp in org.SalesPoints:
-                    #    if Kkt.salesPointId == sp.id:
-                    #        Kkt.salesPointName = sp.name
-                    #        break
-
                     self.Kkts.append(Kkt)
 
     def get_cashboxes_xlsx(self):
@@ -152,12 +152,15 @@ class TKontur():
 
             for i in range(2, ws.max_row+1):
                 for kkt in self.Kkts:
-
                     if kkt.regNumber == str(ws.cell(row=i, column=2).value):
-                        #print (ws.cell(row=i, column=4).value)
-                        kkt.endPay = str(ws.cell(row=i, column=10).value)[13:]
+                        kkt.ffd          = str(ws.cell(row=i, column=6).value)
+                        kkt.state        = str(ws.cell(row=i, column=7).value)
+                        kkt.lastDoc      = str(ws.cell(row=i, column=8).value)
+                        kkt.lastDocDate  = str(ws.cell(row=i, column=9).value)
+                        kkt.endPay       = str(ws.cell(row=i, column=10).value)
+                        kkt.ofd          = str(ws.cell(row=i, column=14).value)
+                        kkt.fnChangeDate = str(ws.cell(row=i, column=15).value)
 
-                        #print (kkt.regNumber + ' - ' +kkt.endPay)
                         break
 
 # --------------------------------------------------------------------------------------------------------------------
@@ -203,7 +206,8 @@ f.write('<body>')
 
 for org in Kontur.Organizations:
     print (org.shortName)
-    f.write('<h1>'+org.shortName+'</h1>')
+    f.write('<br>')
+    f.write('<p><font color="#59b300"><h1>'+org.shortName+'</h1></font></p>')
     for sp in Kontur.SalesPoints:
         if sp.organizationId == org.id:
             print ('  '+sp.name)
@@ -211,17 +215,36 @@ for org in Kontur.Organizations:
 
             f.write('<table border="1" cellpadding="5" cellspacing="0">')
             f.write('<tr>')
-            f.write('<th>Reg namber</th>')
-            f.write('<th>End pay</th>')
+            f.write('<th>Заводской №</th>')
+            f.write('<th>Регистрационный №</th>')
+            f.write('<th>Заводской № ФН</th>')
+            f.write('<th>ФФД</th>')
+            f.write('<th>Состояние ККТ</th>')
+            f.write('<th>Последний документ</th>')
+            f.write('<th>Дата последнего документа</th>')
+            f.write('<th>Оплата</th>')
+            f.write('<th>ОФД</th>')
+            f.write('<th>Срок замены ФН</th>')
             f.write('</tr>')
+
             for kkt in Kontur.Kkts:
                 if (kkt.organizationId == org.id) and (kkt.salesPointId == sp.id):
                     f.write('<tr>')
                     print ('    ' + kkt.regNumber)
                     print ('    ' + kkt.endPay)
+                    f.write('<td>' + kkt.serialNumber + '</td>')
                     f.write('<td>' + kkt.regNumber + '</td>')
+                    f.write('<td>' + kkt.fnSerialNumber + '</td>')
+
+                    f.write('<td>' + kkt.ffd + '</td>')
+                    f.write('<td>' + kkt.state + '</td>')
+                    f.write('<td>' + kkt.lastDoc  + '</td>')
+                    f.write('<td>' + kkt.lastDocDate + '</td>')
                     f.write('<td>' + kkt.endPay + '</td>')
+                    f.write('<td>' + kkt.ofd  + '</td>')
+                    f.write('<td>' + kkt.fnChangeDate + '</td>')
                     f.write('</tr>')
+
             f.write('</table>')
 
 f.write('</body>')
