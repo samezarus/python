@@ -129,7 +129,7 @@ class TKontur():
                     Organization.fullName       = item ['fullName']
                     Organization.isBlocked      = item ['isBlocked']
                     #Organization.creationDate   = item ['creationDate'] # нет у пустой организации
-                    Organization.hasEvotorOffer = item ['hasEvotorOffer']
+                    #Organization.hasEvotorOffer = item ['hasEvotorOffer'] # 23.09.2019 перестал работать
                     Organization.addDate = datetime.now()
 
                     self.Organizations.append (Organization)
@@ -365,7 +365,7 @@ Kontur.get_cashboxes_xlsx()
 print (Kontur.lastError)
 #
 
-Kontur.addon_xlsx()
+#Kontur.addon_xlsx()
 
 #
 
