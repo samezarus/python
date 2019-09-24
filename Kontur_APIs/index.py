@@ -58,6 +58,8 @@ print ('        </form>')
 
 """
 
+print ('<p><h3>Сводная таблица по всем Юр. лицам</h3></p>')
+
 for org in dbOrgs.find():
     if org['isBlocked'] == 'False':
         spList = dbSps.find({"organizationId": org['id']})
@@ -71,9 +73,9 @@ for org in dbOrgs.find():
                     if kktList.count() > 0:
                         print ('<h4>'+sp['name']+'</h4>')
 
-                        print ('<table border="1" cellpadding="5" cellspacing="0">')
+                        print ('<table bgcolor="#EAFAF1" border="1" cellpadding="5" cellspacing="0">')
 
-                        print ('<tr>')
+                        print ('<tr bgcolor="#DCF5FD">')
 
                         print ('<th>Рег. №</th>')
                         print ('<th>Имя (из ОФД)</th>')
@@ -91,7 +93,7 @@ for org in dbOrgs.find():
                         print ('<th>Версия ПО</th>')
                         print ('<th>МАС-адрес</th>')
                         print ('<th>Заметка</th>')
-                        print ('<th>Дата записи</th>')
+                        print ('<th>Дата обновления данных</th>')
 
                         print ('</tr>')
 
@@ -136,5 +138,3 @@ for org in dbOrgs.find():
 
 print ('    </body>')
 print ('</html>')
-
-print (n)
