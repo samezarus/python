@@ -55,7 +55,6 @@ print ('                </select>')
 print ('                <input type="submit" value="Отправить">')
 print ('            </p>')
 print ('        </form>')
-
 """
 
 print ('<p><h3> Осталось дней до окончания услуги Контур ОФД </h3></p>')
@@ -81,10 +80,10 @@ for kkt in dbKkts.find():
             if kkt['state'] != 'Закрыт фискальный накопитель':
                 print ('<tr>')
 
-                org = dbOrgs.find_one({'id':kkt['organizationId']})
+                org = dbOrgs.find_one({'id':kkt['organizationId']})      
                 print ('<td>' + org['shortName'] + '</td>')
 
-                sp = dbSps.find_one({'organizationId': kkt['organizationId']})
+                sp = dbSps.find_one({'id': kkt['salesPointId']})
                 print ('<td>' + sp['name'] + '</td>')
 
                 print ('<td>' + kkt['regNumber'] + '</td>')
