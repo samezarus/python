@@ -89,9 +89,10 @@ class TKontur():
     def end_pay_format(self, s):
         # "28.07.2019 - 28.08.2020" to "28.08.2020"
         result = s
-
-        if s[2] == '.' and s[5] == '.' and s[11] == '-' and s[15] == '.' and s[18] == '.':
-            result = s[13:23]
+        
+        if len(s) == 23:
+            if s[2] == '.' and s[5] == '.' and s[11] == '-' and s[15] == '.' and s[18] == '.':
+                result = s[13:23]
 
         return result
 
