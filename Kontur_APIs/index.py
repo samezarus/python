@@ -102,7 +102,7 @@ for org in dbOrgs.find():
                                 print ('<tr>')
                                 print ('<td>' + kkt['regNumber'] + '</td>')
                                 print ('<td>' + kkt['name'] + '</td>')
-                                print ('<td>' + kkt['ukmName'] + '</td>')
+                                print ('<td>' + kkt['sgoName'] + '</td>')
                                 print ('<td>' + kkt['serialNumber'] + '</td>')
                                 #print ('<td>' + kkt['organizationId'] + '</td>')
                                 print ('<td>' + kkt['modelName'] + '</td>')
