@@ -15,7 +15,7 @@ from datetime import datetime
 
 class TKkt():
     # из json-a
-    regNumber      = '' # Регистрациооный номер
+    regNumber      = '' # Регистрациооный номер (РНМ кассы)
     name           = '' # имя ККТ
     serialNumber   = '' # Заводской номер ККТ
     organizationId = '' # id организации
@@ -35,14 +35,43 @@ class TKkt():
     mac      = '' # MAC - АДРЕС
     memo     = '' # Примечание
     # из УКМ-а
-    ukmName = '' # имя в УКМ сервере
+    sgoName = '' # имя c СГО сервера
     #
     addDate = '' # Дата создания/обновления записи
+
+class TKktStatistics():
+    # Текущее состояние на кассе с Регистрационным номером "cashboxRegNumber"
+    cashboxRegNumber = ''
+    #
+    buy_cashlessTotal = 0.0
+    buy_cashTotal = 0.0
+    buy_total = 0.0
+    buy_revenue = 0.0
+    buy_count = 0
+    #
+    returnBuy_cashlessTotal = 0.0
+    returnBuy_cashTotal = 0.0
+    returnBuy_total = 0.0
+    returnBuy_revenue = 0.0
+    returnBuy_count = 0
+    # --- чеки продаж
+    sell_cashlessTotal = 0.0  # Безналичными
+    sell_cashTotal = 0.0  # Наличными
+    sell_total = 0.0  # Выручка
+    sell_revenue = 0.0
+    sell_count = 0  # Количество чеков
+    # --- чеки возвратов
+    returnSell_cashlessTotal = 0.0
+    returnSell_cashTotal = 0.0
+    returnSell_total = 0.0
+    returnSell_revenue = 0.0
+    returnSell_count = 0
 
 class TSalesPoint():
     organizationId = '' # id Организации за которой закреплена данная точка продаж
     id             = '' # id Точки продажи
     name           = '' # Имя Точки продажи
+    sgoName        = '' # имя c СГО сервера
     #
     addDate = '' # Дата создания/обновления записи
 
@@ -72,6 +101,7 @@ class TKontur():
     Organizations = [] # Список организаций
     SalesPoints   = [] # Списка точек продаж организации
     Kkts          = [] # Список ККТ
+    KktStatistics = [] # Список текущих статусов продаж касс
 
     sgoServer   = ''
     sgoUser     = ''
@@ -82,19 +112,30 @@ class TKontur():
 
     addonXlsxFile = '' # экселька Райгородского
 
+
+
     def __init__(self):
-        """Constructor"""
-        pass
+        conn = pymongo.MongoClient('localhost', 27017)
+        db   = conn['TKontur']
+
+        self.dbOrgs          = db['orgs']
+        self.dbSps           = db['sps']
+        self.dbKkts          = db['kkts']
+        self.dbKktStatistics = db['kktStatistics']
 
     def end_pay_format(self, s):
         # "28.07.2019 - 28.08.2020" to "28.08.2020"
         result = s
-        
         if len(s) == 23:
             if s[2] == '.' and s[5] == '.' and s[11] == '-' and s[15] == '.' and s[18] == '.':
                 result = s[13:23]
 
         return result
+
+    def nowRuDate(self):
+        s = str(datetime.now())
+        s = s[8:10] + '.' + s[5:7] + '.' + s[0:4]
+        return s
 
     def authenticate_by_pass(self):
         # Аутентификация/авторизация и получение SID-a (https://kontur-ofd-api.readthedocs.io/ru/latest/Auth/authenticate-by-pass.html)
@@ -130,7 +171,7 @@ class TKontur():
                     Organization.fullName       = item ['fullName']
                     Organization.isBlocked      = item ['isBlocked']
                     #Organization.creationDate   = item ['creationDate'] # нет у пустой организации
-                    #Organization.hasEvotorOffer = item ['hasEvotorOffer'] # 23.09.2019 перестал работать
+                    #Organization.hasEvotorOffer = item ['hasEvotorOffer']
                     Organization.addDate = datetime.now()
 
                     self.Organizations.append (Organization)
@@ -184,6 +225,65 @@ class TKontur():
             else:
                 self.lastError = 'Не могу получить список ККТ у ' + org.shortName
 
+    def get_sp_tickets(self, orgId, spId, fromDate, toDate):
+        # Получение сумарной информации по каждой кассе конкретной Организации на конкретной Точке продаж
+
+        # сумарно по вусем точкам https://ofd-api.kontur.ru/v1/organizations/16c9ac54-76a6-4610-9b4a-4306f8b7edba/statistics/cashReceipt?From=01.10.2019&To=01.10.2019
+        # по каждой точке https://ofd-api.kontur.ru/v1/organizations/16c9ac54-76a6-4610-9b4a-4306f8b7edba/statistics/cashReceipt/salesPoints?From=01.10.2019&To=01.10.2019
+        # по сумарно конкретной точке https://ofd-api.kontur.ru/v1/organizations/16c9ac54-76a6-4610-9b4a-4306f8b7edba/statistics/cashReceipt/salesPoints/7e563e8d-4d67-450f-a60e-1561c315f9a9?From=01.10.2019&To=01.10.2019
+        # список чеков по конкретной точке по каждой кассе https://ofd-api.kontur.ru/v1/organizations/16c9ac54-76a6-4610-9b4a-4306f8b7edba/statistics/cashReceipt/salesPoints/7e563e8d-4d67-450f-a60e-1561c315f9a9/cashboxes?From=01.10.2019&To=01.10.2019
+
+        url_str = self.endPoint + 'v1/organizations/'+orgId+'/statistics/cashReceipt/salesPoints/'+spId+'/cashboxes?From='+fromDate+'&To='+toDate
+
+        h = httplib2.Http('.cache')
+        (resp, content) = h.request(uri=url_str, method='GET', headers=self.cookies)
+
+        if str(resp.status) == '200':
+            json_obj = json.loads(content.decode("utf-8"))
+
+            for item in json_obj:
+                #print (item['cashboxRegNumber'])
+                for kkt in self.Kkts:
+                    if kkt.regNumber == item['cashboxRegNumber']:
+                        #print (item['items'][0]['sell']['total'])
+
+                        KktStatistic = TKktStatistics()
+                        #
+                        KktStatistic.cashboxRegNumber = item['cashboxRegNumber']
+                        #
+                        KktStatistic.buy_cashlessTotal = item['items'][0]['buy']['cashlessTotal']
+                        KktStatistic.buy_cashTotal     = item['items'][0]['buy']['cashTotal']
+                        KktStatistic.buy_total         = item['items'][0]['buy']['total']
+                        KktStatistic.buy_revenue       = item['items'][0]['buy']['revenue']
+                        KktStatistic.buy_count         = item['items'][0]['buy']['count']
+                        #
+                        KktStatistic.returnBuy_cashlessTotal = item['items'][0]['returnBuy']['cashlessTotal']
+                        KktStatistic.returnBuy_cashTotal     = item['items'][0]['returnBuy']['cashTotal']
+                        KktStatistic.returnBuy_total         = item['items'][0]['returnBuy']['total']
+                        KktStatistic.returnBuy_revenue       = item['items'][0]['returnBuy']['revenue']
+                        KktStatistic.returnBuy_count         = item['items'][0]['returnBuy']['count']
+                        #
+                        KktStatistic.sell_cashlessTotal = item['items'][0]['sell']['cashlessTotal']
+                        KktStatistic.sell_cashTotal     = item['items'][0]['sell']['cashTotal']
+                        KktStatistic.sell_total         = item['items'][0]['sell']['total']
+                        KktStatistic.sell_revenue       = item['items'][0]['sell']['revenue']
+                        KktStatistic.sell_count         = item['items'][0]['sell']['count']
+                        #
+                        KktStatistic.returnSell_cashlessTotal = item['items'][0]['returnSell']['cashlessTotal']
+                        KktStatistic.returnSell_cashTotal     = item['items'][0]['returnSell']['cashTotal']
+                        KktStatistic.returnSell_total         = item['items'][0]['returnSell']['total']
+                        KktStatistic.returnSell_revenue       = item['items'][0]['returnSell']['revenue']
+                        KktStatistic.returnSell_count         = item['items'][0]['returnSell']['count']
+
+                        self.KktStatistics.append(KktStatistic)
+
+    def get_statistics(self):
+        for org in self.Organizations:
+            for sp in self.SalesPoints:
+                if sp.organizationId == org.id:
+                    self.get_sp_tickets(org.id, sp.id, self.nowRuDate(), self.nowRuDate())
+
+
     def get_cashboxes_xlsx(self):
         for org in self.Organizations:
             url_str = self.endPoint + 'v1/organizations/' + org.id + '/cashbox-connection/cashboxes'
@@ -228,10 +328,6 @@ class TKontur():
                     break
 
     def org_to_mongo(self):
-        conn           = pymongo.MongoClient('localhost', 27017)
-        db             = conn['TKontur']
-        dbOrgs = db['orgs']
-
         for org in self.Organizations:
             doc = {"id": str(org.id),
                    "inn": str(org.inn),
@@ -244,16 +340,12 @@ class TKontur():
                    "addDate": str(org.addDate),
                    }
 
-            if dbOrgs.find({"id" : str(org.id)}).count() == 0:
-                dbOrgs.save(doc)
+            if self.dbOrgs.find({"id" : str(org.id)}).count() == 0:
+                self.dbOrgs.save(doc)
             else:
-                dbOrgs.update({"id": str(org.id)}, doc)
+                self.dbOrgs.update({"id": str(org.id)}, doc)
 
     def sp_to_mongo(self):
-        conn           = pymongo.MongoClient('localhost', 27017)
-        db             = conn['TKontur']
-        dbSps = db['sps']
-
         for sp in self.SalesPoints:
             doc = {"organizationId": str(sp.organizationId),
                    "id": str(sp.id),
@@ -261,16 +353,12 @@ class TKontur():
                    "addDate": str(sp.addDate),
                    }
 
-            if dbSps.find({"id": str(sp.id)}).count() == 0:
-                dbSps.save(doc)
+            if self.dbSps.find({"id": str(sp.id)}).count() == 0:
+                self.dbSps.save(doc)
             else:
-                dbSps.update({"id": str(sp.id)}, doc)
+                self.dbSps.update({"id": str(sp.id)}, doc)
 
     def kkt_to_mongo(self):
-        conn           = pymongo.MongoClient('localhost', 27017)
-        db             = conn['TKontur']
-        dbKkts = db['kkts']
-
         for kkt in self.Kkts:
             doc = {"regNumber": str(kkt.regNumber),
                    "name": str(kkt.name),
@@ -289,14 +377,44 @@ class TKontur():
                    "firmware": str(kkt.firmware),
                    "mac": str(kkt.mac),
                    "memo": str(kkt.memo),
-                   "ukmName": str(kkt.ukmName),
+                   "sgoName": str(kkt.sgoName),
                    "addDate": str(kkt.addDate),
                    }
 
-            if dbKkts.find({"serialNumber": str(kkt.serialNumber)}).count() == 0:
-                dbKkts.save(doc)
+            if self.dbKkts.find({"serialNumber": str(kkt.serialNumber)}).count() == 0:
+                self.dbKkts.save(doc)
             else:
-                dbKkts.update({"serialNumber": str(kkt.serialNumber)}, doc)
+                self.dbKkts.update({"serialNumber": str(kkt.serialNumber)}, doc)
+
+    def kktStatistic_to_mongo(self):
+        for KktStatistic in self.KktStatistics:
+            doc = {"cashboxRegNumber": KktStatistic.cashboxRegNumber,
+                   "buy_cashlessTotal": KktStatistic.buy_cashlessTotal,
+                   "buy_total": KktStatistic.buy_total,
+                   "buy_revenue": KktStatistic.buy_revenue,
+                   "buy_count": KktStatistic.buy_count,
+                   "returnBuy_cashlessTotal": KktStatistic.returnBuy_cashlessTotal,
+                   "returnBuy_cashTotal": KktStatistic.returnBuy_cashTotal,
+                   "returnBuy_total": KktStatistic.returnBuy_total,
+                   "returnBuy_revenue": KktStatistic.returnBuy_revenue,
+                   "returnBuy_count": KktStatistic.returnBuy_count,
+                   "sell_cashlessTotal": KktStatistic.sell_cashlessTotal,
+                   "sell_cashTotal": KktStatistic.sell_cashTotal,
+                   "sell_total": KktStatistic.sell_total,
+                   "sell_revenue": KktStatistic.sell_revenue,
+                   "sell_count": KktStatistic.sell_count,
+                   "returnSell_cashlessTotal": KktStatistic.returnSell_cashlessTotal,
+                   "returnSell_cashTotal": KktStatistic.returnSell_cashTotal,
+                   "returnSell_total": KktStatistic.returnSell_total,
+                   "returnSell_revenue": KktStatistic.returnSell_revenue,
+                   "returnSell_count": KktStatistic.returnSell_count,
+                   }
+
+            if self.dbKktStatistics.find({"cashboxRegNumber": str(KktStatistic.cashboxRegNumber)}).count() == 0:
+                self.dbKktStatistics.save(doc)
+            else:
+                self.dbKktStatistics.update({"cashboxRegNumber": str(KktStatistic.cashboxRegNumber)}, doc)
+
 
     def from_sgo(self):
         #
@@ -313,14 +431,15 @@ class TKontur():
             dbUkms = db['ukms']
 
             with connection.cursor() as cursor:
-                # trm_in_pos (name)
-                # trm_out_shift_close(cash_id)
+                # Дополняеи инфу о Точках продаж из СГО
+
+                # Дополняеи инфу о ККТ из СГО
                 sql = 'SELECT DISTINCT trm_out_shift_close.kkm_serial_number, trm_in_pos.name from trm_out_shift_close, trm_in_pos WHERE trm_out_shift_close.cash_id = trm_in_pos.cash_id'
                 cursor.execute(sql)
                 for row in cursor:
                     for kkt in self.Kkts:
                         if row['kkm_serial_number'] ==  kkt.serialNumber:
-                            kkt.ukmName = row['name']
+                            kkt.sgoName = row['name']
                             break
         finally:
             connection.close()
@@ -346,27 +465,31 @@ Kontur.addonXlsxFile = 'addon.xlsx'
 
 Kontur.authenticate_by_pass()
 #print (Kontur.SID)
-print (Kontur.lastError)
+#print (Kontur.lastError)
 #
 
 Kontur.get_organizations()
 #print (len(Kontur.Organizations))
-print (Kontur.lastError)
+#print (Kontur.lastError)
 #
 
 Kontur.get_sales_point()
-print (Kontur.lastError)
+#print (Kontur.lastError)
 #
 
 Kontur.get_cashboxes()
-print (Kontur.lastError)
+#print (Kontur.lastError)
 #
 
 Kontur.get_cashboxes_xlsx()
-print (Kontur.lastError)
+#print (Kontur.lastError)
 #
 
-#Kontur.addon_xlsx()
+Kontur.get_statistics()
+#print (Kontur.lastError)
+#
+
+Kontur.addon_xlsx()
 
 #
 
@@ -377,9 +500,11 @@ Kontur.from_sgo()
 Kontur.org_to_mongo()
 Kontur.sp_to_mongo()
 Kontur.kkt_to_mongo()
+Kontur.kktStatistic_to_mongo()
 
 #
 
+"""
 f = open('log.html', 'w')
 f.write('<html>')
 f.write('<body>')
@@ -433,3 +558,4 @@ f.write('</body>')
 f.write('</html>')
 f.close()
 
+"""
