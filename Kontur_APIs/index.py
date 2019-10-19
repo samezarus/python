@@ -21,9 +21,10 @@ def delta_days(tstmp):
 conn   = pymongo.MongoClient('localhost', 27017)
 db     = conn['TKontur']
 
-dbOrgs = db['orgs']
-dbSps  = db['sps']
-dbKkts = db['kkts']
+dbOrgs          = db['orgs']
+dbSps           = db['sps']
+dbKkts          = db['kkts']
+dbKktStatistics = db['kktStatistics']
 
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 print ('Content-type: text/html\n\n')
@@ -43,20 +44,7 @@ print ('        <title>Обработка данных форм</title>')
 print ('    </head>')
 print ('    <body>')
 
-"""
-print ('        <form action="/py/test.py" method="POST">')
-print ('            <p>')
-print ('                <select name="select">')
-print ('                    <option name="n1" selected value="s1">Чебурашка</option>')
-print ('                    <option name="n2" value="s2">Крокодил Гена</option>')
-print ('                    <option name="n3" value="s3">Шапокляк</option>')
-print ('                    <option name="n4" value="s4">Крыса Лариса</option>')
-print ('                </select>')
-print ('                <input type="submit" value="Отправить">')
-print ('            </p>')
-print ('        </form>')
 
-"""
 
 print ('<p><h3>Сводная таблица по всем Юр. лицам</h3></p>')
 
@@ -93,6 +81,17 @@ for org in dbOrgs.find():
                         print ('<th>Версия ПО</th>')
                         print ('<th>МАС-адрес</th>')
                         print ('<th>Заметка</th>')
+                        #
+                        print ('<th>Чеки продаж безнал</th>')
+                        print ('<th>Чеки продаж нал</th>')
+                        print ('<th>Чеки продаж выручка</th>')
+                        print ('<th>Количество чеков продаж</th>')
+                        print ('<th>Чеки возвратов безнал</th>')
+                        print ('<th>Чеки возвратов нал</th>')
+                        print ('<th>Чеки возвратов сумма</th>')
+                        print ('<th>Количество чеков возвратов</th>')
+
+                        #
                         print ('<th>Дата обновления данных</th>')
 
                         print ('</tr>')
@@ -129,6 +128,19 @@ for org in dbOrgs.find():
                                 print ('<td>' + kkt['firmware'] + '</td>')
                                 print ('<td>' + kkt['mac'] + '</td>')
                                 print ('<td>' + kkt['memo'] + '</td>')
+
+                                statList = dbKktStatistics.find({"cashboxRegNumber": kkt['regNumber']})
+                                if statList.count() > 0:
+                                    for stat in statList:
+                                        print ('<td>' + str(stat['sell_cashlessTotal']) + '</td>')
+                                        print ('<td>' + str(stat['sell_cashTotal']) + '</td>')
+                                        print ('<td>' + str(stat['sell_total']) + '</td>')
+                                        print ('<td>' + str(stat['sell_count']) + '</td>')
+                                        print ('<td>' + str(stat['returnSell_cashlessTotal']) + '</td>')
+                                        print ('<td>' + str(stat['returnSell_cashTotal']) + '</td>')
+                                        print ('<td>' + str(stat['returnSell_total']) + '</td>')
+                                        print ('<td>' + str(stat['returnSell_count']) + '</td>')
+
                                 print ('<td>' + kkt['addDate'] + '</td>')
                                 print ('</tr>')
 
