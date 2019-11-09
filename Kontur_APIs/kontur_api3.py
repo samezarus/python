@@ -198,16 +198,16 @@ class TKontur():
 
 Kontur = TKontur()
 #
-Kontur.ofd_api_key   = kontur_ofd_api_key # ключ для доступа личного кабинета через браузер
+Kontur.ofd_api_key   = kontur_cfg.kontur_ofd_api_key # ключ для доступа личного кабинета через браузер
 Kontur.SID           = ''
 Kontur.cookieDomain  = '.kontur.ru'
 Kontur.endPoint      = 'https://ofd-api.kontur.ru/'
-Kontur.mail          = kontur_mail
-Kontur.passwd        = kontur_passwd
-Kontur.sgoServer     = kontur_sgoServer
-Kontur.sgoUser       = kontur_sgoUser
-Kontur.sgoPassword   = kontur_sgoPassword
-Kontur.sgoDb         = kontur_sgoDb
+Kontur.mail          = kontur_cfg.kontur_mail
+Kontur.passwd        = kontur_cfg.kontur_passwd
+Kontur.sgoServer     = kontur_cfg.kontur_sgoServer
+Kontur.sgoUser       = kontur_cfg.kontur_sgoUser
+Kontur.sgoPassword   = kontur_cfg.kontur_sgoPassword
+Kontur.sgoDb         = kontur_cfg.kontur_sgoDb
 Kontur.addonXlsxFile = 'addon.xlsx'
 #
 Kontur.authenticate_by_pass()
