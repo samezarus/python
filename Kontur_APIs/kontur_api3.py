@@ -14,6 +14,7 @@ import pymongo
 import pymysql
 from datetime import datetime
 import psutil
+import kontur_cfg
 
 
 def runScriptQuery(killQuery):
@@ -59,18 +60,18 @@ class TKontur():
     endPoint     = '' # площадка
     mail         = '' # емаил авторизации
     passwd       = '' # пароль авторизации
-
+    #
     authStatusCode = '' # код статуса авторизации
-
+    #
     sgoServer   = ''
     sgoUser     = ''
     sgoPassword = ''
     sgoDb       = ''
-
+    #
     lastError = ''
-
+    #
     addonXlsxFile = '' # экселька Райгородского
-
+    #
     logFileName = 'log.txt'
     # ------------------------------------------------------------------------------------------------------------------
     def __init__(self):
@@ -92,7 +93,6 @@ class TKontur():
     def to_log (self, logStr):
         if len(logStr) > 0:
             self.logFile.write(str(datetime.now()) + ' - ' + logStr+ '\n')
-
     # ------------------------------------------------------------------------------------------------------------------
     def end_pay_format(self, s):
         # "28.07.2019 - 28.08.2020" to "28.08.2020"
@@ -100,7 +100,7 @@ class TKontur():
         if len(s) == 23:
             if s[2] == '.' and s[5] == '.' and s[11] == '-' and s[15] == '.' and s[18] == '.':
                 result = s[13:23]
-
+        #
         return result
     # ------------------------------------------------------------------------------------------------------------------
     def nowRuDate(self):
@@ -117,7 +117,7 @@ class TKontur():
         h                   = httplib2.Http('.cache')
         (resp, content)     = h.request(uri=url_str, method='POST', body=self.passwd)
         self.authStatusCode = str(resp.status)
-
+        #
         if self.authStatusCode == '200':
             self.SID = content.decode("utf-8")
             self.SID = self.SID[8:]
@@ -137,16 +137,18 @@ class TKontur():
         #
         if ticketResp.status == '200':
             self.to_log(strForLog)
-            self.tickets.save(ticketResp.jsonDoc)
+            findDocNumb = ticketResp.jsonDoc['documentInfo']['fiscalDocumentNumber']['value']
+            if self.tickets.find({'documentInfo.fiscalDocumentNumber.value': findDocNumb}).count() == 0:
+                self.tickets.save(ticketResp.jsonDoc)
         #
         del ticketResp
     # ------------------------------------------------------------------------------------------------------------------
-    def get_inf(self, getTickets):
+    def get_inf(self, getTicketsFlag):
         if self.authStatusCode == '200':
             urlStr  = self.endPoint + 'v1/organizations' # Запрос на получение списка "Организаций" доступных пользователю
             self.newCookie()
             orgsResp = TResponse(urlStr, 'GET', self.cookies)
-
+            #
             if orgsResp.status == '200':
                 for org in orgsResp.jsonDoc:
                     orgId   = org['id']        # id "Организации"
@@ -157,11 +159,11 @@ class TKontur():
                     urlStr = self.endPoint + 'v1/lk/organizations/' + orgId + '/cashboxes' # Запрос на получение "Точек продаж" и их "ККТ"
                     self.newCookie()
                     spsKktsResp = TResponse(urlStr, 'GET', self.cookies)
-
+                    #
                     if spsKktsResp.status == '200':
                         self.dbSpsKks.save(spsKktsResp.jsonDoc)
                         spsCount = len(spsKktsResp.jsonDoc['items']) # Количество "Точек продаж" у "Организации"
-
+                        #
                         for i in range(spsCount):
                             spId = spsKktsResp.jsonDoc['items'][i]['salesPointId']     # ID "Точки продаж"
                             spName = spsKktsResp.jsonDoc['items'][i]['salesPointName'] # Имя "Точки продаж"
@@ -177,30 +179,50 @@ class TKontur():
                                 jsonDoc = spsKktsResp.jsonDoc['items'][i]['cashboxStates'][j] #
                                 self.save_or_update(self.dbKks, 'cashboxRegNumber', jsonDoc)  # Добавляем/Обновляем инф. о "ККТ"
                                 #
-                                if getTickets == True:
+                                if getTicketsFlag == True:
                                     allDocCount  = spsKktsResp.jsonDoc['items'][i]['cashboxStates'][j]['lastDocumentsByType']['cashReceipt']['cashboxDocumentId']['fiscalDocumentNumber']
                                     kktRegNumber = spsKktsResp.jsonDoc['items'][i]['cashboxStates'][j]['cashboxRegNumber']
                                     fnId         = spsKktsResp.jsonDoc['items'][i]['cashboxStates'][j]['fnSerialNumber']
-
+                                    #
                                     findTicket = self.tickets.find({'cashbox.regNumber.value': kktRegNumber, 'documentInfo.fnSerialNumber.value': fnId})
-                                    docNumb = findTicket.count()
-
+                                    docNumb    = findTicket.count()
+                                    #
                                     for k in range(docNumb, allDocCount):
                                         strForLog = 'get doc | ' + orgName + ' | ' + spName + ' | ' + kktName + ' | ' + str(k +1)
                                         self.get_ticket(orgId, kktRegNumber, fnId, k +1, strForLog)
+    # ------------------------------------------------------------------------------------------------------------------
+    def show_inf(self):
+        pass
+
 # ----------------------------------------------------------------------------------------------------------------------
 
 Kontur = TKontur()
 #
-Kontur.ofd_api_key   = '' # ключ для доступа личного кабинета через браузер
+"""
+Kontur.ofd_api_key   = '42AA28A1-F60C-4A2C-A44D-7420061986C9' # ключ для доступа личного кабинета через браузер
 Kontur.SID           = ''
 Kontur.cookieDomain  = '.kontur.ru'
 Kontur.endPoint      = 'https://ofd-api.kontur.ru/'
-Kontur.mail          = '
-Kontur.passwd        = ''
-Kontur.sgoUser       = ''
-Kontur.sgoPassword   = ''
-Kontur.sgoDb         = ''
+Kontur.mail          = 'sameza@remi.ru'
+Kontur.passwd        = 'Zv1c9xknturyjs1'
+Kontur.mail          = 'kontur_api_bot@remi.ru'
+Kontur.passwd        = 'BH@KDh#R!8X7jDpmiyc7'
+Kontur.sgoServer     = '192.168.12.18'
+Kontur.sgoUser       = 'cash_view'
+Kontur.sgoPassword   = 'CtHDbCGK.C'
+Kontur.sgoDb         = 'ukmserver'
+Kontur.addonXlsxFile = 'addon.xlsx'
+"""
+Kontur.ofd_api_key   = kontur_ofd_api_key # ключ для доступа личного кабинета через браузер
+Kontur.SID           = ''
+Kontur.cookieDomain  = '.kontur.ru'
+Kontur.endPoint      = 'https://ofd-api.kontur.ru/'
+Kontur.mail          = kontur_mail
+Kontur.passwd        = kontur_passwd
+Kontur.sgoServer     = kontur_sgoServer
+Kontur.sgoUser       = kontur_sgoUser
+Kontur.sgoPassword   = kontur_sgoPassword
+Kontur.sgoDb         = kontur_sgoDb
 Kontur.addonXlsxFile = 'addon.xlsx'
 #
 Kontur.authenticate_by_pass()
