@@ -13,6 +13,8 @@ apiURL = 'https://api-invest.tinkoff.ru/openapi'
 Portfolio
 
 	apiURL + '/portfolio'
+	
+	apiURL + '/portfolio/currencies'
 
 Market
 
