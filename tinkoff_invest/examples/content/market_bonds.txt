@@ -1,0 +1,461 @@
+# apiURL = 'https://api-invest.tinkoff.ru/openapi'
+# apiURL + '/market/bonds'
+
+{
+    'trackingId': '...',
+    'payload':
+    {
+        'instruments':
+            [
+                {
+                    'figi': 'BBG00FFH2SJ8',
+                    'ticker': 'SU24019RMFS0',
+                    'isin': 'RU000A0JX0J2',
+                    'minPriceIncrement': 0.001,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'ОФЗ 24019'
+                },
+                {
+                    'figi': 'BBG00844BD08',
+                    'ticker': 'RU000A0JU898',
+                    'isin': 'RU000A0JU898',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'МКБ выпуск 9'
+                },
+                {
+                    'figi': 'BBG00R05JT04',
+                    'ticker': 'RU000A1013Y3',
+                    'isin': 'RU000A1013Y3',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'Черкизово выпуск\xa02'
+                },
+                {
+                    'figi': 'BBG00PNLY692',
+                    'ticker': 'RU000A100DC4',
+                    'isin': 'RU000A100DC4',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'МСБ-Лизинг 002P выпуск 2'
+                },
+                {
+                    'figi': 'BBG00LFKPBJ0',
+                    'ticker': 'RU000A0ZZCV0',
+                    'isin': 'RU000A0ZZCV0',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'ЛЕГЕНДА выпуск 1'
+                },
+                {
+                    'figi': 'BBG00KHGQP89',
+                    'ticker': 'RU000A0ZZ1F6',
+                    'isin': 'RU000A0ZZ1F6',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'КарМани выпуск 2'
+                },
+                {
+                    'figi': 'BBG00JYHHXN7',
+                    'ticker': 'RU000A0ZYR18',
+                    'isin': 'RU000A0ZYR18',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'Башкирская содовая компания выпуск 1'
+                },
+                {
+                    'figi': 'BBG00HNGJ8K1',
+                    'ticker': 'RU000A0ZYA66',
+                    'isin': 'RU000A0ZYA66',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'Эталон выпуск 2'
+                },
+                {
+                    'figi': 'BBG00Q9K64Q5',
+                    'ticker': 'RU000A100TD8',
+                    'isin': 'RU000A100TD8',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'Солид-Лизинг выпуск\xa05'
+                },
+                {
+                    'figi': 'BBG00JM75814',
+                    'ticker': 'RU000A0ZYM05',
+                    'isin': 'RU000A0ZYM05',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'ГПБ (АО) БО-25'
+                },
+                {
+                    'figi': 'BBG0000FHGH3',
+                    'ticker': 'XS0504954347',
+                    'isin': 'XS0504954347',
+                    'minPriceIncrement': 0.0001,
+                    'lot': 1,
+                    'currency': 'USD',
+                    'name': 'RUS-20'
+                },
+                {
+                    'figi': 'BBG00H2TYMQ2',
+                    'ticker': 'RU000A0JXVE5',
+                    'isin': 'RU000A0JXVE5',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'СИНХ-Финанс выпуск 1'
+                },
+                {
+                    'figi': 'BBG00MSH3D92',
+                    'ticker': 'RU000A0ZZXP8',
+                    'isin': 'RU000A0ZZXP8',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'Кредит Европа Банк выпуск 2'
+                },
+                {
+                    'figi': 'BBG00J5KZDG4',
+                    'ticker': 'RU000A0ZYF61',
+                    'isin': 'RU000A0ZYF61',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'Ненецкий АО выпуск 1'
+                },
+                {
+                    'figi': 'BBG00DXC6XY2',
+                    'ticker': 'RU000A0JWUV3',
+                    'isin': 'RU000A0JWUV3',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'Новосибирская область выпуск 17'
+                },
+                {
+                    'figi': 'BBGHUYNYAPU3',
+                    'ticker': 'RU000A0JXPU3',
+                    'isin': 'RU000A0JXPU3',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'Концерн Калашников выпуск\xa01'
+                },
+                {
+                    'figi': 'BBG001JYK0R0',
+                    'ticker': 'RU000A0JR8P0',
+                    'isin': 'RU000A0JR8P0',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'Мечел выпуск 16'
+                },
+                {
+                    'figi': 'BBG00KSL6M30',
+                    'ticker': 'RU000A0ZZ4T1',
+                    'isin': 'RU000A0ZZ4T1',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'РСХБ выпуск T1'
+                },
+                {
+                    'figi': 'BBG00FN9GW49',
+                    'ticker': 'RU000A0JX3A5',
+                    'isin': 'RU000A0JX3A5',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'Лидер-Инвест выпуск 1'
+                },
+                {
+                    'figi': 'BBG00J1Z0ZM7',
+                    'ticker': 'RU000A0ZYDS7',
+                    'isin': 'RU000A0ZYDS7',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'Газпром нефть ПАО 001P-03R'
+                },
+                {
+                    'figi': 'BBG00N6FS8J1',
+                    'ticker': 'RU000A100238',
+                    'isin': 'RU000A100238',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'МТС выпуск 7'
+                },
+                {
+                    'figi': 'BBG00NRG74N3',
+                    'ticker': 'RU000A1008B1',
+                    'isin': 'RU000A1008B1',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'Тинькофф Банк выпуск 2'
+                },
+                {
+                    'figi': 'BBG00QKPK0Z3',
+                    'ticker': 'RU000A100X69',
+                    'isin': 'RU000A100X69',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'Ренессанс Страхование выпуск\xa01'
+                },
+                {
+                    'figi': 'BBG00NWBZTW2',
+                    'ticker': 'RU000A1009B9',
+                    'isin': 'RU000A1009B9',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'Детский мир выпуск 7'
+                },
+                {
+                    'figi': 'BBG00G9HL1X5',
+                    'ticker': 'RU000A0JXMH7',
+                    'isin': 'RU000A0JXMH7',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'МТС выпуск 2'
+                },
+                {
+                    'figi': 'BBG00GNG2N37',
+                    'ticker': 'RU000A0JXQK2',
+                    'isin': 'RU000A0JXQK2',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'ПАО НК Роснефть 001P-04'
+                },
+                {
+                    'figi': 'BBG00PYL4HQ0',
+                    'ticker': 'RU000A100D30',
+                    'isin': 'RU000A100D30',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'Республика Беларусь выпуск\xa03'
+                },
+                {
+                    'figi': 'BBG002GKWFZ6',
+                    'ticker': 'XS0743596040',
+                    'isin': 'XS0743596040',
+                    'minPriceIncrement': 1e-06,
+                    'lot': 1,
+                    'currency': 'USD',
+                    'name': 'SBERRU 6 1/8 02/07/22'
+                },
+                {
+                    'figi': 'BBG00GSNW6C1',
+                    'ticker': 'RU000A0JXRS3',
+                    'isin': 'RU000A0JXRS3',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'ИКС 5 Финанс выпуск 2'
+                },
+                {
+                    'figi': 'BBG00P33Q8B6',
+                    'ticker': 'RU000A100BB0',
+                    'isin': 'RU000A100BB0',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'Русал Братск БО-001P выпуск 1'
+                },
+                {
+                    'figi': 'BBG00PYMV931',
+                    'ticker': 'RU000A100LE3',
+                    'isin': 'RU000A100LE3',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'Ламбумиз выпуск 1'
+                },
+                {
+                    'figi': 'BBG0000KN1Z8',
+                    'ticker': 'RU000A0JQS09',
+                    'isin': 'RU000A0JQS09',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'РСХБ выпуск 10'
+                },
+                {
+                    'figi': 'BBG003TTSBB1',
+                    'ticker': 'SU26211RMFS1',
+                    'isin': 'RU000A0JTJL3',
+                    'minPriceIncrement': 0.001,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'ОФЗ 26211'
+                },
+                {
+                    'figi': 'BBG00N8HZBK8',
+                    'ticker': 'CBOM0224EU',
+                    'isin': 'XS1951067039',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'EUR',
+                    'name': 'Credit Bank of Moscow'
+                },
+                {
+                    'figi': 'BBG00FZMB3Y3',
+                    'ticker': 'RU000A0JXFS8',
+                    'isin': 'RU000A0JXFS8',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'Газпром капитал выпуск 5'
+                },
+                {
+                    'figi': 'BBG00B6KDC94',
+                    'ticker': 'RU000A0JUB02',
+                    'isin': 'RU000A0JUB02',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'АльфаБанк выпуск 5'
+                },
+                {
+                    'figi': 'BBG00JGF4LC3',
+                    'ticker': 'RU000A0ZYM21',
+                    'isin': 'RU000A0ZYM21',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'Домодедововыпуск 1'
+                },
+                {
+                    'figi': 'BBG00H436ZX1',
+                    'ticker': 'RU000A0JXVY3',
+                    'isin': 'RU000A0JXVY3',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'Обувьрус выпуск 1'
+                },
+                {
+                    'figi': 'BBG0042XYMN5',
+                    'ticker': 'RU000A0JTVJ2',
+                    'isin': 'RU000A0JTVJ2',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'РСХБ выпуск 20'
+                },
+                {
+                    'figi': 'BBG00MTS7DY5',
+                    'ticker': 'RU000A0ZZYL5',
+                    'isin': 'RU000A0ZZYL5',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'Калужская СК выпуск 1'
+                },
+                {
+                    'figi': 'BBG00007PBP4',
+                    'ticker': 'XS0424860947',
+                    'isin': 'XS0424860947',
+                    'minPriceIncrement': 0.0001,
+                    'lot': 100,
+                    'currency': 'USD',
+                    'name': 'GAZPRU 9 1/4 04/23/19'
+                },
+                {
+                    'figi': 'BBG00J5KYZN8',
+                    'ticker': 'RU000A0ZYFB8',
+                    'isin': 'RU000A0ZYFB8',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'Красноярский край  выпуск 14'
+                },
+                {
+                    'figi': 'BBG00F0JX6G7',
+                    'ticker': 'RU000A0JWWG0',
+                    'isin': 'RU000A0JWWG0',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'Первое коллекторское бюро выпуск 1'
+                },
+                {
+                    'figi': 'BBG003P5FHW5',
+                    'ticker': 'XS0861981180',
+                    'isin': 'XS0861981180',
+                    'minPriceIncrement': 0.0001,
+                    'lot': 200,
+                    'currency': 'USD',
+                    'name': 'Rosneft'
+                },
+                {
+                    'figi': 'BBG006SB4SV1',
+                    'ticker': 'RU000A0JUQP7',
+                    'isin': 'RU000A0JUQP7',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'Самарская область 2014'
+                },
+                {
+                    'figi': 'BBG00HPKBFV0',
+                    'ticker': 'RU000A0ZYA74',
+                    'isin': 'RU000A0ZYA74',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'РСГ-Финанс выпуск 3'
+                },
+                {
+                    'figi': 'BBG003QGKHV5',
+                    'ticker': 'SU26210RMFS3',
+                    'isin': 'RU000A0JTG59',
+                    'minPriceIncrement': 0.001,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'ОФЗ 26210'
+                },
+                {
+                    'figi': 'BBG009LB6H99',
+                    'ticker': 'RU000A0JVM81',
+                    'isin': 'RU000A0JVM81',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'Оренбургская область выпуск 3'
+                },
+                {
+                    'figi': 'BBG00QTDV828',
+                    'ticker': 'RU000A101012',
+                    'isin': 'RU000A101012',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'АФК Система выпуск\xa012'
+                },
+                {
+                    'figi': 'BBG00CNJBLC4',
+                    'ticker': 'RU000A0JWDN6',
+                    'isin': 'RU000A0JWDN6',
+                    'minPriceIncrement': 0.01,
+                    'lot': 1,
+                    'currency': 'RUB',
+                    'name': 'РУСАЛ Братск выпуск 1'
+                },
+                {'figi': 'BBG00PXMNQ97', 'ticker': 'RU000A100PE4', 'isin': 'RU000A100PE4', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'РЕСО-Лизинг БО-П выпуск 6'}, {'figi': 'BBG00J3MJ9F0', 'ticker': 'RU000A0ZYFC6', 'isin': 'RU000A0ZYFC6', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'МТС выпуск 3'}, {'figi': 'BBG00D236G28', 'ticker': 'XS1405775617', 'isin': 'XS1405775617', 'minPriceIncrement': 0.0001, 'lot': 1, 'currency': 'USD', 'name': 'NLMKRU 4 1/2 06/15/23'}, {'figi': 'BBG00GQ6RPR8', 'ticker': 'RU000A0JXS75', 'isin': 'RU000A0JXS75', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Уралкалий выпуск 3'}, {'figi': 'BBG00QKHLXT5', 'ticker': 'RU000A100WF7', 'isin': 'RU000A100WF7', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Новосибирск выпуск\xa010'}, {'figi': 'BBG00NHJGKN2', 'ticker': 'RU000A1004K1', 'isin': 'RU000A1004K1', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Европлан БО 05'}, {'figi': 'BBG00QJ5M7P3', 'ticker': 'RU000A100W29', 'isin': 'RU000A100W29', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Роделен выпуск\xa02'}, {'figi': 'BBG00PNM0N81', 'ticker': 'RU000A100DF7', 'isin': 'RU000A100DF7', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ЧЗПСН-Профнастил БО-П1'}, {'figi': 'BBG00B626S06', 'ticker': 'RU000A0JVV49', 'isin': 'RU000A0JVV49', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Республика Мордовия выпуск 2'}, {'figi': 'BBG008F8JLJ1', 'ticker': 'RU000A0JUFQ8', 'isin': 'RU000A0JUFQ8', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Банк Открытие выпуск 8'}, {'figi': 'BBG00FZGD8T9', 'ticker': 'RU000A0JXHE4', 'isin': 'RU000A0JXHE4', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ЧТПЗ выпуск 2'}, {'figi': 'BBG006S593T7', 'ticker': 'RU000A0JUQR3', 'isin': 'RU000A0JUQR3', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'МКБ выпуск 11'}, {'figi': 'BBG00000FS91', 'ticker': 'MTS0620', 'isin': 'XS0513723873', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'USD', 'name': 'MTS'}, {'figi': 'BBG006R4Q1T6', 'ticker': 'RU000A0JUQF8', 'isin': 'RU000A0JUQF8', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Ярославская область выпуск 13'}, {'figi': 'BBG00FGC2VY4', 'ticker': 'RU000A0JX108', 'isin': 'RU000A0JX108', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'АО ЭР-Телеком Холдинг ПБО-02'}, {'figi': 'BBG00PGSFB22', 'ticker': 'RU000A100G03', 'isin': 'RU000A100G03', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Буровая компания Евразия выпуск 3'}, {'figi': 'BBG00PYMLGV5', 'ticker': 'RU000A100M47', 'isin': 'RU000A100M47', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Дэни Колл выпуск 1'}, {'figi': 'BBG00PZTRH32', 'ticker': 'RU000A100PS4', 'isin': 'RU000A100PS4', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'РСГ-Финанс выпуск 9'}, {'figi': 'BBG00HBPXX50', 'ticker': 'RU000A0JXY44', 'isin': 'RU000A0JXY44', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ПИК БО-П выпуск 3'}, {'figi': 'BBG00N9JTH81', 'ticker': 'RU000A0ZZV52', 'isin': 'RU000A0ZZV52', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Роделен выпуск 1'}, {'figi': 'BBG0000JWX54', 'ticker': 'XS0316524130', 'isin': 'XS0316524130', 'minPriceIncrement': 0.0001, 'lot': 100, 'currency': 'USD', 'name': 'Gazprom'}, {'figi': 'BBG00QN37PX1', 'ticker': 'RU000A100XU4', 'isin': 'RU000A100XU4', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'РЕСО-Лизинг БО-П выпуск\xa07'}, {'figi': 'BBG005GC23W0', 'ticker': 'SU26214RMFS5', 'isin': 'RU000A0JTYA5', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 26214'}, {'figi': 'BBG00DY7RMW5', 'ticker': 'RU000A0JWVL2', 'isin': 'RU000A0JWVL2', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Европлан  БО 07'}, {'figi': 'BBG00JCMH6F8', 'ticker': 'RU000A0ZYJ83', 'isin': 'RU000A0ZYJ83', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'МТС выпуск 4'}, {'figi': 'BBG00NHKJVW2', 'ticker': 'RU000A1004G9', 'isin': 'RU000A1004G9', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Магнит выпуск\xa02'}, {'figi': 'BBG00PVT72G7', 'ticker': 'RU000A100DM3', 'isin': 'RU000A100DM3', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ТЕХНО Лизинг выпуск 1'}, {'figi': 'BBG00HS2HZF5', 'ticker': 'RU000A0ZYBG6', 'isin': 'RU000A0ZYBG6', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Дельта Кредит БО-001P выпуск 1'}, {'figi': 'BBG00K2B2M16', 'ticker': 'RU000A0ZYU05', 'isin': 'RU000A0ZYU05', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'РЖД 001Р выпуск 5'}, {'figi': 'BBG00008RB70', 'ticker': 'RU000A0JNYN1', 'isin': 'RU000A0JNYN1', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Москва выпуск 48'}, {'figi': 'BBG00PVL2PM1', 'ticker': 'RU000A100N12', 'isin': 'RU000A100N12', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'АФК Система выпуск\xa011'}, {'figi': 'BBG00QB5VPL5', 'ticker': 'RU000A100UG9', 'isin': 'RU000A100UG9', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ХКФ Банк выпуск 6'}, {'figi': 'BBG00FBB67V3', 'ticker': 'RU000A0JX0B9', 'isin': 'RU000A0JX0B9', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Московская область выпуск 10'}, {'figi': 'BBG0000K94P9', 'ticker': 'RU000A0JQRD9', 'isin': 'RU000A0JQRD9', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'РЖД выпуск 23'}, {'figi': 'BBG0000J5D76', 'ticker': 'XS0304274599', 'isin': 'XS0304274599', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'USD', 'name': 'Lukoil'}, {'figi': 'BBG00G4V94J3', 'ticker': 'EVRZ0323', 'isin': 'XS1533915721', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'USD', 'name': 'Evraz'}, {'figi': 'BBG00629F2Y6', 'ticker': 'XS1040726587', 'isin': 'XS1040726587', 'minPriceIncrement': 0.0001, 'lot': 200, 'currency': 'USD', 'name': 'GPBRU 4.96 09/05/19'}, {'figi': 'BBG00L9H7QZ3', 'ticker': 'RU000A0ZZBV2', 'isin': 'RU000A0ZZBV2', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Европлан БО 08'}, {'figi': 'BBG00NZHWSQ8', 'ticker': 'SU26228RMFS5', 'isin': 'RU000A100A82', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 26228'}, {'figi': 'BBG00NZHNQH2', 'ticker': 'RU000A1009Z8', 'isin': 'RU000A1009Z8', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': "О'КЕЙ выпуск 2"}, {'figi': 'BBG00QKPP373', 'ticker': 'RU000A100XP4', 'isin': 'RU000A100XP4', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Московская область выпуск\xa012'}, {'figi': 'BBG001F8S9L0', 'ticker': 'XS0587031096', 'isin': 'XS0587031096', 'minPriceIncrement': 1e-06, 'lot': 1, 'currency': 'USD', 'name': 'ВымпелКом 7.75 2021'}, {'figi': 'BBG001MKQDG4', 'ticker': 'XS0620695204', 'isin': 'XS0620695204', 'minPriceIncrement': 0.0001, 'lot': 200, 'currency': 'USD', 'name': 'ALFARU 7 3/4 04/28/21'}, {'figi': 'BBG00840MQ69', 'ticker': 'RU000A0JV8D0', 'isin': 'RU000A0JV8D0', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ВЭБ-Лизинг выпуск 4'}, {'figi': 'BBG00K4MR057', 'ticker': 'RU000A0ZYWU3', 'isin': 'RU000A0ZYWU3', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'АФК Система выпуск 8'}, {'figi': 'BBG00K64TZR2', 'ticker': 'RU000A0ZYWY5', 'isin': 'RU000A0ZYWY5', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'МТС выпуск 6'}, {'figi': 'BBG00838D7Z3', 'ticker': 'RU000A0JUW31', 'isin': 'RU000A0JUW31', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'РСХБ выпуск 13'}, {'figi': 'BBG00JM7DBZ1', 'ticker': 'RU000A0ZYM54', 'isin': 'RU000A0ZYM54', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Центральная ППК П01-БО-01'}, {'figi': 'BBG00QG2Y896', 'ticker': 'RU000A100V61', 'isin': 'RU000A100V61', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Обувь России 001P выпуск 1'}, {'figi': 'BBG00HPZ5DD9', 'ticker': 'RU000A0ZYAR5', 'isin': 'RU000A0ZYAR5', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ДОМ.РФ выпуск 9'}, {'figi': 'BBG00K2JQWT1', 'ticker': 'RU000A0ZYT40', 'isin': 'RU000A0ZYT40', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ПАО НК Роснефть 002P-04'}, {'figi': 'BBG00K7QTXX0', 'ticker': 'RU000A0ZYVU5', 'isin': 'RU000A0ZYVU5', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ПАО НК Роснефть 002P-05'}, {'figi': 'BBG00JDYT2T2', 'ticker': 'RU000A0ZYHK5', 'isin': 'RU000A0ZYHK5', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ГПБ (АО) БО-15'}, {'figi': 'BBG00J7PCW56', 'ticker': 'GAZP1124', 'isin': 'XS1721463500', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'EUR', 'name': 'Gazprom'}, {'figi': 'BBG00NZJ2QF3', 'ticker': 'RU000A100B40', 'isin': 'RU000A100B40', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Автодор БО-2 выпуск 3'}, {'figi': 'BBG00J055ZP6', 'ticker': 'RU000A0ZYDD9', 'isin': 'RU000A0ZYDD9', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Транснефть ПАО БО-001P-08'}, {'figi': 'BBG00PVT6KR6', 'ticker': 'RU000A100CG7', 'isin': 'RU000A100CG7', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ОбъединениеАгроЭлита выпуск 3'}, {'figi': 'BBG00PBZNWM4', 'ticker': 'SU26230RMFS1', 'isin': 'RU000A100EF5', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 26230'}, {'figi': 'BBG00CR2Y2T6', 'ticker': 'RU000A0JWE56', 'isin': 'RU000A0JWE56', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Газпромбанк выпуск 22'}, {'figi': 'BBG00GSNVXC3', 'ticker': 'RU000A0JXSD3', 'isin': 'RU000A0JXSD3', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Волгоградская область выпуск 7'}, {'figi': 'BBG00LLM12G8', 'ticker': 'RU000A0ZZES2', 'isin': 'RU000A0ZZES2', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Газпром БО-22'}, {'figi': 'BBG00P33LXJ8', 'ticker': 'RU000A100AZ1', 'isin': 'RU000A100AZ1', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ТрансКомплектХолдинг'}, {'figi': 'BBG00G6TQMW2', 'ticker': 'RU000A0JXN13', 'isin': 'RU000A0JXN13', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'РСГ-Финанс выпуск 7'}, {'figi': 'BBG00HXHKRV2', 'ticker': 'RU000A0ZYEQ9', 'isin': 'RU000A0ZYEQ9', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Сэтл Групп выпуск 1'}, {'figi': 'BBG00CM4SCD9', 'ticker': 'RU000A0JWCM0', 'isin': 'RU000A0JWCM0', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ТМК выпуск 5'}, {'figi': 'BBG00K4MPZ61', 'ticker': 'RU000A0ZYU21', 'isin': 'RU000A0ZYU21', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Альфа-Банк выпуск 40'}, {'figi': 'BBG007Z13SN3', 'ticker': 'SU29006RMFS2', 'isin': 'RU000A0JV4L2', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 29006'}, {'figi': 'BBG005MCTC09', 'ticker': 'XS0997544860', 'isin': 'XS0997544860', 'minPriceIncrement': 0.0001, 'lot': 200, 'currency': 'USD', 'name': 'Gazpromneft'}, {'figi': 'BBG00L31GQQ4', 'ticker': 'RU000A0ZZ7R8', 'isin': 'RU000A0ZZ7R8', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Дядя Дёнер выпуск 1'}, {'figi': 'BBG00P3B1V33', 'ticker': 'RU000A100AA4', 'isin': 'RU000A100AA4', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ТАЛАН-ФИНАНС-001P-01'}, {'figi': 'BBG00386NQK6', 'ticker': 'SU26209RMFS5', 'isin': 'RU000A0JSMA2', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 26209'}, {'figi': 'BBG00QPRTZJ6', 'ticker': 'RU000A100YR8', 'isin': 'RU000A100YR8', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Роснано БО-002P выпуск 3'}, {'figi': 'BBG00DGSQ218', 'ticker': 'RU000A0JWP46', 'isin': 'RU000A0JWP46', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ПИК БО выпуск 7'}, {'figi': 'BBG00JDYRRR1', 'ticker': 'RU000A0ZYJR6', 'isin': 'RU000A0ZYJR6', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Совкомбанк, БО-5'}, {'figi': 'BBG00FX0RDF5', 'ticker': 'SU26220RMFS2', 'isin': 'RU000A0JXB41', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 26220'}, {'figi': 'BBG007Z5FFL1', 'ticker': 'SU29010RMFS4', 'isin': 'RU000A0JV4Q1', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 29010'}, {'figi': 'BBG00GKHR834', 'ticker': 'RU000A0JXQ85', 'isin': 'RU000A0JXQ85', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Тинькофф Банк выпуск 1'}, {'figi': 'BBG00GDC1GV2', 'ticker': 'RU000A0JXPD9', 'isin': 'RU000A0JXPD9', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ТМК выпуск 6'}, {'figi': 'BBG001QZKC93', 'ticker': 'RU000A0JRK22', 'isin': 'RU000A0JRK22', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Нефтегазхолдинг АО обл.серия06'}, {'figi': 'BBG0043FH1D9', 'ticker': 'RU000A0JTM28', 'isin': 'RU000A0JTM28', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Башнефть выпуск 6'}, {'figi': 'BBG004FZWNM7', 'ticker': 'XS0922301717', 'isin': 'XS0922301717', 'minPriceIncrement': 0.0001, 'lot': 1, 'currency': 'USD', 'name': 'Polyus Gold'}, {'figi': 'BBG00GB81W02', 'ticker': 'RU000A0JXME4', 'isin': 'RU000A0JXME4', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ЧТПЗ выпуск 3'}, {'figi': 'BBG00HZNZVC3', 'ticker': 'SU25083RMFS5', 'isin': 'RU000A0ZYCK6', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 25083'}, {'figi': 'BBG00JM14CY3', 'ticker': 'RU000A0ZYLK7', 'isin': 'RU000A0ZYLK7', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Верхнебаканский цементный завод 001P выпуск 1'}, {'figi': 'BBG00LFVP8P6', 'ticker': 'RU000A0ZZD39', 'isin': 'RU000A0ZZD39', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ЧЗПСН-Профнастил выпуск 1'}, {'figi': 'BBG00BN37RF0', 'ticker': 'RU000A0JVZY8', 'isin': 'RU000A0JVZY8', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Почта России (ФГУП) БО-01'}, {'figi': 'BBG009J3VGJ3', 'ticker': 'RU000A0JVKF9', 'isin': 'RU000A0JVKF9', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Республика Коми выпуск 12'}, {'figi': 'BBG003PNSC99', 'ticker': 'XS0864383723', 'isin': 'XS0864383723', 'minPriceIncrement': 0.0001, 'lot': 200, 'currency': 'USD', 'name': 'Novatek'}, {'figi': 'BBGYAKUTV001', 'ticker': 'RU000A100PB0', 'isin': 'RU000A100PB0', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ЖКХ Якутии выпуск 1'}, {'figi': 'BBG00K1X4WH8', 'ticker': 'RU000A0ZYRY5', 'isin': 'RU000A0ZYRY5', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ГПБ (АО) БО-19'}, {'figi': 'BBG00F6NJY77', 'ticker': 'RU000A0JWYQ5', 'isin': 'RU000A0JWYQ5', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'АФК Система выпуск 4'}, {'figi': 'BBG00K14Y7Z4', 'ticker': 'RU000A0ZYTM6', 'isin': 'RU000A0ZYTM6', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'МегаФон БО-1 выпуск 4'}, {'figi': 'BBG00GVWHJJ9', 'ticker': 'RU000A0JXS34', 'isin': 'RU000A0JXS34', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'КТЖ Финанс Серия 1'}, {'figi': 'BBG00QKHL1Q8', 'ticker': 'RU000A100X77', 'isin': 'RU000A100X77', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Кредит Европа Банк выпуск\xa03'}, {'figi': 'BBG00GFRHRL7', 'ticker': 'RU000A0JXNF9', 'isin': 'RU000A0JXNF9', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Газпром нефть ПАО 001P-01R'}, {'figi': 'BBG00GGTPSP7', 'ticker': 'RU000A0JXP45', 'isin': 'RU000A0JXP45', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ГПБ (АО) БО-16'}, {'figi': 'BBG00J7HHGH1', 'ticker': 'RU000A0ZYG52', 'isin': 'RU000A0ZYG52', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Ростелеком выпуск 3'}, {'figi': 'BBG00GH77N11', 'ticker': 'RU000A0JXQH8', 'isin': 'RU000A0JXQH8', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': "О'КЕЙ выпуск 1"}, {'figi': 'BBG00JC8FQL0', 'ticker': 'RU000A0ZYGM3', 'isin': 'RU000A0ZYGM3', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Орловская область 2017'}, {'figi': 'BBG00PYMSNH9', 'ticker': 'RU000A100K31', 'isin': 'RU000A100K31', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Агрофирма Рубеж выпуск\xa01'}, {'figi': 'BBG00NNMVRW6', 'ticker': 'RU000A100782', 'isin': 'RU000A100782', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Лента БО-001P выпуск 2'}, {'figi': 'BBG00PZ6T956', 'ticker': 'RU000A100Q35', 'isin': 'RU000A100Q35', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ПР-Лизинг выпуск 3'}, {'figi': 'BBG00N9Q06D4', 'ticker': 'RU000A1003A4', 'isin': 'RU000A1003A4', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ГТЛК выпуск 13'}, {'figi': 'BBG000000006', 'ticker': 'RU000A1014B9', 'isin': 'RU000A1014B9', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': "О'КЕЙ выпуск\xa03"}, {'figi': 'BBG00P0ML5F4', 'ticker': 'RU000A1009R5', 'isin': 'RU000A1009R5', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ФЭС-Агро выпуск 1'}, {'figi': 'BBG00D1W74B1', 'ticker': 'RU000A0JWLG3', 'isin': 'RU000A0JWLG3', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Эталон выпуск 1'}, {'figi': 'BBG00QPGLLB7', 'ticker': 'RU000A100YD8', 'isin': 'RU000A100YD8', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Нафтатранс Плюс выпуск\xa02'}, {'figi': 'BBG00K1Y24S8', 'ticker': 'RU000A0ZYU39', 'isin': 'RU000A0ZYU39', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Лидер-Инвест выпуск 2'}, {'figi': 'BBG00GTVP3G3', 'ticker': 'RU000A0JXRW5', 'isin': 'RU000A0JXRW5', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Сбербанк ПАО БО-19'}, {'figi': 'BBG00MSGYVV5', 'ticker': 'RU000A0ZZZ66', 'isin': 'RU000A0ZZZ66', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'АльфаБанк 002Р выпуск 3'}, {'figi': 'BBG0000GXSD1', 'ticker': 'GAZP0322', 'isin': 'XS0290580595', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'USD', 'name': 'Gazprom'}, {'figi': 'BBG00CTDLPF8', 'ticker': 'RU000A0JWG96', 'isin': 'RU000A0JWG96', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ВЭБ выпуск 2'}, {'figi': 'BBG00QDTJQD2', 'ticker': 'RU000A100V79', 'isin': 'RU000A100V79', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Тинькофф Банк выпуск 3'}, {'figi': 'BBG00GCRTCX7', 'ticker': 'RU000A0JXN05', 'isin': 'RU000A0JXN05', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'РЖД 001Р выпуск 1'}, {'figi': 'BBG001LW67X5', 'ticker': 'RU000A0JRCX7', 'isin': 'RU000A0JRCX7', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ВЭБ.РФ выпуск 9'}, {'figi': 'BBG00PYL4HX2', 'ticker': 'RU000A100D63', 'isin': 'RU000A100D63', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Республика Беларусь выпуск\xa04'}, {'figi': 'BBG00NTZTZ47', 'ticker': 'RU000A1008W7', 'isin': 'RU000A1008W7', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Северсталь выпуск 6'}, {'figi': 'BBG00DR9QH79', 'ticker': 'RU000A0JWSQ7', 'isin': 'RU000A0JWSQ7', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Республика Мордовия выпуск 3'}, {'figi': 'BBG00HKB9SR5', 'ticker': 'RU000A0JY031', 'isin': 'RU000A0JY031', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Республика Марий Эл выпуск 8'}, {'figi': 'BBG00KGFTD86', 'ticker': 'RU000A0ZZ0L6', 'isin': 'RU000A0ZZ0L6', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Элемент Лизинг 001P выпуск 1'}, {'figi': 'BBG00F17MVL3', 'ticker': 'RU000A0JWWX5', 'isin': 'RU000A0JWWX5', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'РГ Лиз выпуск 1'}, {'figi': 'BBG0043SLLZ8', 'ticker': 'XS0889401724', 'isin': 'XS0889401724', 'minPriceIncrement': 1e-06, 'lot': 1, 'currency': 'USD', 'name': 'ВымпелКом, 5.95%, 2023'}, {'figi': 'BBG00MXQXG50', 'ticker': 'RU000A0ZZZP3', 'isin': 'RU000A0ZZZP3', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ВЭБ.РФ ПБО-1 выпуск 12'}, {'figi': 'BBG00FB978L6', 'ticker': 'RU000A0JWZY6', 'isin': 'RU000A0JWZY6', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'АФК Система выпуск 5'}, {'figi': 'BBG00MNBY334', 'ticker': 'RU000A0ZZUR0', 'isin': 'RU000A0ZZUR0', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'МСБ-Лизинг 002P выпуск 1'}, {'figi': 'BBG00GDCVLB0', 'ticker': 'RU000A0JXMZ9', 'isin': 'RU000A0JXMZ9', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Детский мир выпуск 4'}, {'figi': 'BBG00PBH3R29', 'ticker': 'RU000A100DZ5', 'isin': 'RU000A100DZ5', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Совкомбанк, БО-П1'}, {'figi': 'BBG00KSL6X90', 'ticker': 'RU000A0ZZ547', 'isin': 'RU000A0ZZ547', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ГК Пионер-001P выпуск 3'}, {'figi': 'BBG00JDS8JM8', 'ticker': 'RU000A0ZYJ91', 'isin': 'RU000A0ZYJ91', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ФСК ЕЭС БО-4'}, {'figi': 'BBG00MNNT619', 'ticker': 'RU000A0ZZV03', 'isin': 'RU000A0ZZV03', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ГрузовичкоФ-Центр выпуск 2'}, {'figi': 'BBG00NB4WD68', 'ticker': 'RU000A1003E6', 'isin': 'RU000A1003E6', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Флай Плэнинг БО-П1'}, {'figi': 'BBG00JH9W610', 'ticker': 'RU000A0ZYLB6', 'isin': 'RU000A0ZYLB6', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'РСГ-Финанс выпуск 4'}, {'figi': 'BBG00J8B8QK7', 'ticker': 'RU000A0ZYG60', 'isin': 'RU000A0ZYG60', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Саратовская область выпуск 1'}, {'figi': 'BBG00JCTFXS2', 'ticker': 'RU000A0ZYHX8', 'isin': 'RU000A0ZYHX8', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Санкт-Петербург выпуск 1'}, {'figi': 'BBG00NJ3YSN8', 'ticker': 'RU000A1005T9', 'isin': 'RU000A1005T9', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Гарант-Инвест БО 001P-05'}, {'figi': 'BBG00008WPG3', 'ticker': 'XS0191754729', 'isin': 'XS0191754729', 'minPriceIncrement': 0.0001, 'lot': 10, 'currency': 'USD', 'name': 'Gazprom'}, {'figi': 'BBG00FM98YG2', 'ticker': 'RU000A0JX2M2', 'isin': 'RU000A0JX2M2', 'minPriceIncrement': 0.0001, 'lot': 1, 'currency': 'USD', 'name': 'Росэксимбанк выпуск 1'}, {'figi': 'BBG0000644P5', 'ticker': 'XS0088543193', 'isin': 'XS0088543193', 'minPriceIncrement': 0.0001, 'lot': 1, 'currency': 'USD', 'name': 'Russia'}, {'figi': 'BBG005KR3D77', 'ticker': 'SU26216RMFS0', 'isin': 'RU000A0JU9V1', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 26216'}, {'figi': 'BBG00GH12JY2', 'ticker': 'RU000A0JXPN8', 'isin': 'RU000A0JXPN8', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Ростелеком выпуск 2'}, {'figi': 'BBG00HZ6D1S3', 'ticker': 'RU000A0ZYBS1', 'isin': 'RU000A0ZYBS1', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Сбербанк ПАО БО 001P-03R'}, {'figi': 'BBG0000CJR20', 'ticker': 'XS0524610812', 'isin': 'XS0524610812', 'minPriceIncrement': 0.0001, 'lot': 1, 'currency': 'USD', 'name': 'VEB'}, {'figi': 'BBG00HS78YK1', 'ticker': 'RU000A0ZYAQ7', 'isin': 'RU000A0ZYAQ7', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'КарМани выпуск 1'}, {'figi': 'BBG00HYBTVJ0', 'ticker': 'RU000A0ZYDA5', 'isin': 'RU000A0ZYDA5', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Кредит Европа Банк выпуск 1'}, {'figi': 'BBG00GSG5RB1', 'ticker': 'RU000A0JXRD5', 'isin': 'RU000A0JXRD5', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Почта России выпуск 2'}, {'figi': 'BBG002WJHMY4', 'ticker': 'RU000A0JRVU3', 'isin': 'RU000A0JRVU3', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Теле2-СПб выпуск 7'}, {'figi': 'BBG00GCZK5M5', 'ticker': 'XS1589324075', 'isin': 'XS1589324075', 'minPriceIncrement': 0.0001, 'lot': 1, 'currency': 'USD', 'name': 'GMK NorNickel'}, {'figi': 'BBG00FVSZBH9', 'ticker': 'RU000A0JXE06', 'isin': 'RU000A0JXE06', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ГТЛК выпуск 3'}, {'figi': 'BBG00N6FR9B8', 'ticker': 'RU000A100220', 'isin': 'RU000A100220', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'РОСБАНК БО-002P выпуск 4'}, {'figi': 'BBG00JX82779', 'ticker': 'RU000A0ZYQY7', 'isin': 'RU000A0ZYQY7', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'АФК Система выпуск 7'}, {'figi': 'BBG00LLCGT66', 'ticker': 'RU000A0ZZFH2', 'isin': 'RU000A0ZZFH2', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Центральная ППК выпуск 2'}, {'figi': 'BBG007Z5DZS2', 'ticker': 'SU29008RMFS8', 'isin': 'RU000A0JV4P3', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 29008'}, {'figi': 'BBG002YTY9Z9', 'ticker': 'XS0783242877', 'isin': 'XS0783242877', 'minPriceIncrement': 0.0001, 'lot': 1, 'currency': 'USD', 'name': 'AFK Sistema'}, {'figi': 'BBG00B9PJ7V0', 'ticker': 'SU26218RMFS6', 'isin': 'RU000A0JVW48', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 26218'}, {'figi': 'BBG00B59DR33', 'ticker': 'GMKN1022', 'isin': 'XS1298447019', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'USD', 'name': 'GMK NorNickel'}, {'figi': 'BBG00PGF9ZR7', 'ticker': 'RU000A100F95', 'isin': 'RU000A100F95', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'РЕСО-Лизинг БО-П выпуск 04'}, {'figi': 'BBG00FZVDNZ6', 'ticker': 'XS1567051443', 'isin': 'XS1567051443', 'minPriceIncrement': 1e-06, 'lot': 1, 'currency': 'USD', 'name': 'CHMFRU 3.85 08/27/21'}, {'figi': 'BBG00GQQQ009', 'ticker': 'RU000A0JXRN4', 'isin': 'RU000A0JXRN4', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ЕвроХим выпуск 2'}, {'figi': 'BBG00K64LC00', 'ticker': 'RU000A0ZYUS1', 'isin': 'RU000A0ZYUS1', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Транснефть ПАО БО-001P-09'}, {'figi': 'BBG0058ZL5S7', 'ticker': 'SU26215RMFS2', 'isin': 'RU000A0JU4L3', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 26215'}, {'figi': 'BBG00JGL9NV0', 'ticker': 'RU000A0ZYKM5', 'isin': 'RU000A0ZYKM5', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Автодор БО-1 выпуск 2'}, {'figi': 'BBG00QPVNQS3', 'ticker': 'RU000A100YT4', 'isin': 'RU000A100YT4', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Экспобанк БО выпуск 2'}, {'figi': 'BBG00NRWRRJ0', 'ticker': 'RU000A1008Z0', 'isin': 'RU000A1008Z0', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ЕвроХим выпуск 3'}, {'figi': 'BBG00MT66937', 'ticker': 'RU000A0ZZXT0', 'isin': 'RU000A0ZZXT0', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Всеинструменты.ру выпуск 1'}, {'figi': 'BBG00FGC1ZM9', 'ticker': 'RU000A0JX0Z8', 'isin': 'RU000A0JX0Z8', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Ямало-Ненецкий АО выпуск 2'}, {'figi': 'BBG00FFH2Z75', 'ticker': 'SU29012RMFS0', 'isin': 'RU000A0JX0H6', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 29012'}, {'figi': 'BBG003GGVXT2', 'ticker': 'XS0842078536', 'isin': 'XS0842078536', 'minPriceIncrement': 1e-06, 'lot': 1, 'currency': 'USD', 'name': 'VTB'}, {'figi': 'BBG00K81G7Y4', 'ticker': 'RU000A0ZYSS5', 'isin': 'RU000A0ZYSS5', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Жилкапинвест выпуск 1'}, {'figi': 'BBG00PVV7ZW1', 'ticker': 'RU000A100HW3', 'isin': 'RU000A100HW3', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'С-Инновации'}, {'figi': 'BBG00CTDC170', 'ticker': 'RU000A0JWGG3', 'isin': 'RU000A0JWGG3', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'МегаФон выпуск 2'}, {'figi': 'BBG00FY2B6D4', 'ticker': 'RU000A0JXC24', 'isin': 'RU000A0JXC24', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Транснефть ПАО БО-001P-05'}, {'figi': 'BBG003824NB3', 'ticker': 'VTBperp', 'isin': 'XS0810596832', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'USD', 'name': 'VTB Perp'}, {'figi': 'BBG00NRGHQQ0', 'ticker': 'RU000A1008J4', 'isin': 'RU000A1008J4', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'АФК Система выпуск 10'}, {'figi': 'BBG00QKPJVK3', 'ticker': 'RU000A100W52', 'isin': 'RU000A100W52', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'СуперОкс выпуск\xa01'}, {'figi': 'BBG00H14LSL4', 'ticker': 'RU000A0JXUD9', 'isin': 'RU000A0JXUD9', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Республика Коми выпуск 14'}, {'figi': 'BBG00F16S5C6', 'ticker': 'XS1510534677', 'isin': 'XS1510534677', 'minPriceIncrement': 0.0001, 'lot': 1, 'currency': 'USD', 'name': 'CRBKMO 5 7/8 11/07/21'}, {'figi': 'BBG00GLT6144', 'ticker': 'SU26222RMFS8', 'isin': 'RU000A0JXQF2', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 26222'}, {'figi': 'BBG004CYSBP1', 'ticker': 'XS0911599701', 'isin': 'XS0911599701', 'minPriceIncrement': 0.0001, 'lot': 1, 'currency': 'USD', 'name': 'TMK'}, {'figi': 'BBG00MXQXHF7', 'ticker': 'RU000A0ZZZU3', 'isin': 'RU000A0ZZZU3', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'СофтЛайн Трейд выпуск\xa02'}, {'figi': 'BBG003CQ4DT8', 'ticker': 'XS0830192711', 'isin': 'XS0830192711', 'minPriceIncrement': 0.0001, 'lot': 1, 'currency': 'USD', 'name': 'SIBNEF 4 3/8 09/19/22'}, {'figi': 'BBG008HCXL04', 'ticker': 'RU000A0JVD17', 'isin': 'RU000A0JVD17', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': "О'КЕЙ БО-5"}, {'figi': 'BBG00MT69C64', 'ticker': 'RU000A0ZZZ17', 'isin': 'RU000A0ZZZ17', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'НКНХ выпуск\xa01'}, {'figi': 'BBG007Z5DF79', 'ticker': 'SU29007RMFS0', 'isin': 'RU000A0JV4M0', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 29007'}, {'figi': 'BBG00HDD93V9', 'ticker': 'RU000A0JXYS9', 'isin': 'RU000A0JXYS9', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Краснодарский край выпуск 1'}, {'figi': 'BBG00K53FBX6', 'ticker': 'SU26224RMFS4', 'isin': 'RU000A0ZYUA9', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 26224'}, {'figi': 'BBG007Z5F748', 'ticker': 'SU29009RMFS6', 'isin': 'RU000A0JV4N8', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 29009'}, {'figi': 'BBG00FRWYRH1', 'ticker': 'RU000A0JX5W4', 'isin': 'RU000A0JX5W4', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Альфа-Банк выпуск 18'}, {'figi': 'BBG00JYHMLM8', 'ticker': 'RU000A0ZYR91', 'isin': 'RU000A0ZYR91', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ГТЛК выпуск 8'}, {'figi': 'BBG00D0VVHV6', 'ticker': 'XS1405775377', 'isin': 'XS1405775377', 'minPriceIncrement': 0.0001, 'lot': 200, 'currency': 'USD', 'name': 'EVRAZ 6 3/4 01/31/22'}, {'figi': 'BBG00QJ5KYT2', 'ticker': 'RU000A100WA8', 'isin': 'RU000A100WA8', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ЛСР выпуск\xa04'}, {'figi': 'BBG002VBXNP2', 'ticker': 'XS0764220017', 'isin': 'XS0764220017', 'minPriceIncrement': 1e-06, 'lot': 1, 'currency': 'USD', 'name': 'RURAIL 5.7 04/05/22'}, {'figi': 'BBG00PVT8347', 'ticker': 'RU000A100E70', 'isin': 'RU000A100E70', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ТаксовичкоФ'}, {'figi': 'BBG00GTQYBZ5', 'ticker': 'RU000A0JXS59', 'isin': 'RU000A0JXS59', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Почта России выпуск 3'}, {'figi': 'BBG0000319F5', 'ticker': 'RU000A0JQ7W9', 'isin': 'RU000A0JQ7W9', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'РЖД выпуск 17'}, {'figi': 'BBG00LWP7DY9', 'ticker': 'XS1783223206', 'isin': 'XS1783223206', 'minPriceIncrement': 0.0001, 'lot': 1, 'currency': 'USD', 'name': 'BCS Structured Products 28feb2021'}, {'figi': 'BBG00NLMHM55', 'ticker': 'RU000A1006C3', 'isin': 'RU000A1006C3', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Пионер-Лизинг-БО-П02'}, {'figi': 'BBG00NZHVFH7', 'ticker': 'RU000A100A90', 'isin': 'RU000A100A90', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'РН Банк БО-1P выпуск 5'}, {'figi': 'BBGHUYNYA0X4', 'ticker': 'RU000A100W60', 'isin': 'RU000A100W60', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Европлан-БО 03'}, {'figi': 'BBGHUYNYA0X3', 'ticker': 'RU000A100VY0', 'isin': 'RU000A100VY0', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ЭБИС выпуск\xa01'}, {'figi': 'BBG00G6V7252', 'ticker': 'SU26221RMFS0', 'isin': 'RU000A0JXFM1', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 26221'}, {'figi': 'BBG00HW3D327', 'ticker': 'RU000A0ZYBT9', 'isin': 'RU000A0ZYBT9', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Россельхозбанк (АО) БО-03P'}, {'figi': 'BBG00HKB9M89', 'ticker': 'RU000A0JY023', 'isin': 'RU000A0JY023', 'minPriceIncrement': 0.0001, 'lot': 1, 'currency': 'USD', 'name': 'GTLK'}, {'figi': 'BBG00L4CT0Z2', 'ticker': 'RU000A0ZZ9W4', 'isin': 'RU000A0ZZ9W4', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Уралкалий выпуск 4'}, {'figi': 'BBG00DLXVHX7', 'ticker': 'RU000A0JWQ45', 'isin': 'RU000A0JWQ45', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Транскапиталбанк  выпуск С04'}, {'figi': 'BBG00PNDGP98', 'ticker': 'RU000A100J18', 'isin': 'RU000A100J18', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Домодедово Фьюэл Фасилитис выпуск 2'}, {'figi': 'BBG00FWXM2Z1', 'ticker': 'RU000A0JXEV5', 'isin': 'RU000A0JXEV5', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'МТС выпуск 1'}, {'figi': 'BBG00JLWWKQ6', 'ticker': 'RU000A0ZYLH3', 'isin': 'RU000A0ZYLH3', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Внешэкономбанк ПБО-001Р-10'}, {'figi': 'BBG003LLR9S4', 'ticker': 'RU000A0JT940', 'isin': 'RU000A0JT940', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Роснефть выпуск 4'}, {'figi': 'BBG009BHWGG2', 'ticker': 'RU000A0JVBS1', 'isin': 'RU000A0JVBS1', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Банк Открытие выпуск 14'}, {'figi': 'BBG00F5TN8S4', 'ticker': 'RU000A0JWY29', 'isin': 'RU000A0JWY29', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Ставропольский край выпуск 3'}, {'figi': 'BBG00NHLC0N5', 'ticker': 'RU000A1005L6', 'isin': 'RU000A1005L6', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'АФК Система выпуск 9'}, {'figi': 'BBG00F171QY3', 'ticker': 'RU000A0JWXF0', 'isin': 'RU000A0JWXF0', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Красноярский край  выпуск 12'}, {'figi': 'BBG0018V9PN0', 'ticker': 'XS0559915961', 'isin': 'XS0559915961', 'minPriceIncrement': 0.0001, 'lot': 1, 'currency': 'USD', 'name': 'VEB'}, {'figi': 'BBG00PC6W5L7', 'ticker': 'RU000A100CT0', 'isin': 'RU000A100CT0', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Онлайн Микрофинанс выпуск\xa01'}, {'figi': 'BBG00174Q663', 'ticker': 'VTB1020', 'isin': 'XS0548633659', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'USD', 'name': 'VTB'}, {'figi': 'BBG002PD3452', 'ticker': 'SU26207RMFS9', 'isin': 'RU000A0JS3W6', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 26207'}, {'figi': 'BBG00CK35DY3', 'ticker': 'RU000A0JWBH2', 'isin': 'RU000A0JWBH2', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ЕвразХолдинг Финанс 001P выпуск 1'}, {'figi': 'BBG005M4CBL4', 'ticker': 'XS0993162683', 'isin': 'XS0993162683', 'minPriceIncrement': 0.0001, 'lot': 1, 'currency': 'USD', 'name': 'VEBBNK 5.942 11/21/23'}, {'figi': 'BBG00D5L3Q99', 'ticker': 'RU000A0JWM56', 'isin': 'RU000A0JWM56', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Самарская область 2016'}, {'figi': 'BBG0084FSWB1', 'ticker': 'RU000A0JV8G3', 'isin': 'RU000A0JV8G3', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ВЭБ-Лизинг выпуск 5'}, {'figi': 'BBG00JF4C7Q6', 'ticker': 'RU000A0ZYJ42', 'isin': 'RU000A0ZYJ42', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Россельхозбанк (АО) БО-04P'}, {'figi': 'BBG00Q38CTS4', 'ticker': 'RU000A100QY0', 'isin': 'RU000A100QY0', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Электрощит-Стройсистема выпуск 1'}, {'figi': 'BBG00HTSM1G5', 'ticker': 'RU000A0ZYBV5', 'isin': 'RU000A0ZYBV5', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ЛСР выпуск 3'}, {'figi': 'BBG00FVSZN01', 'ticker': 'RU000A0JXD07', 'isin': 'RU000A0JXD07', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Трансмашхолдинг выпуск 1'}, {'figi': 'BBG00PBZNT41', 'ticker': 'SU26229RMFS3', 'isin': 'RU000A100EG3', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 26229'}, {'figi': 'BBG00PLXNNX6', 'ticker': 'RU000A100H02', 'isin': 'RU000A100H02', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Магнит выпуск 3'}, {'figi': 'BBG00FZYDS70', 'ticker': 'RU000A0JXJE0', 'isin': 'RU000A0JXJE0', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Гидромашсервис БО выпуск 1'}, {'figi': 'BBG005BSRSN8', 'ticker': 'RU000A0JU609', 'isin': 'RU000A0JU609', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ГТЛК выпуск 2'}, {'figi': 'BBG00K7DT3F5', 'ticker': 'RU000A0ZYX69', 'isin': 'RU000A0ZYX69', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ФПК выпуск 3'}, {'figi': 'BBG00B2XNDH8', 'ticker': 'RU000A0JVSY3', 'isin': 'RU000A0JVSY3', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Удмуртская республика выпуск 7'}, {'figi': 'BBG00MNBSCH6', 'ticker': 'RU000A0ZZUZ3', 'isin': 'RU000A0ZZUZ3', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ХК Финанс выпуск 2'}, {'figi': 'BBG00K53FX22', 'ticker': 'SU26225RMFS1', 'isin': 'RU000A0ZYUB7', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 26225'}, {'figi': 'BBG00KHD8BQ7', 'ticker': 'RU000A0ZZ0R3', 'isin': 'RU000A0ZZ0R3', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ГрузовичкоФ-Центр выпуск 1'}, {'figi': 'BBG00PNW0B21', 'ticker': 'RU000A100JH0', 'isin': 'RU000A100JH0', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Евроторг  выпуск 1'}, {'figi': 'BBG00GTPS391', 'ticker': 'RU000A0JXRP9', 'isin': 'RU000A0JXRP9', 'lot': 1, 'currency': 'RUB', 'name': 'Внешэкономбанк ПБО-001Р-07'}, {'figi': 'BBG00GK399S6', 'ticker': 'RU000A0JXQ93', 'isin': 'RU000A0JXQ93', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ПИК БО-П2'}, {'figi': 'BBG00440D136', 'ticker': 'RU000A0JTMK9', 'isin': 'RU000A0JTMK9', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'РусГидро выпуск 8'}, {'figi': 'BBG00CTM9Q33', 'ticker': 'RU000A0JWGS8', 'isin': 'RU000A0JWGS8', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Дельта Кредит выпуск 20'}, {'figi': 'BBG0000776S2', 'ticker': 'SU46020RMFS2', 'isin': 'RU000A0GN9A7', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 46020'}, {'figi': 'BBG00B4MWD80', 'ticker': 'RU000A0JVUK8', 'isin': 'RU000A0JVUK8', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'АФК Система выпуск 1'}, {'figi': 'BBG00PN9H616', 'ticker': 'RU000A100HU7', 'isin': 'RU000A100HU7', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'МТС выпуск 10'}, {'figi': 'BBG00G5062X1', 'ticker': 'RU000A0JXK40', 'isin': 'RU000A0JXK40', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ПИК БО-П1'}, {'figi': 'BBG000056Z49', 'ticker': 'XS0114288789', 'isin': 'XS0114288789', 'minPriceIncrement': 0.0001, 'lot': 1, 'currency': 'USD', 'name': 'Russia'}, {'figi': 'BBG00NZJ3DG0', 'ticker': 'RU000A100A41', 'isin': 'RU000A100A41', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Элемент Лизинг 001P выпуск\xa02'}, {'figi': 'BBG006R4S5Q8', 'ticker': 'RU000A0JUQC5', 'isin': 'RU000A0JUQC5', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Ашинский метзавод выпуск 1'}, {'figi': 'BBG00CM4RQ58', 'ticker': 'RU000A0JWC82', 'isin': 'RU000A0JWC82', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'РЖД БО-07'}, {'figi': 'BBG00NLMJ541', 'ticker': 'RU000A1006B5', 'isin': 'RU000A1006B5', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ТД Мясничий выпуск 3'}, {'figi': 'BBG006QVR009', 'ticker': 'RU000A0JUQB7', 'isin': 'RU000A0JUQB7', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Белгородская область выпуск 8'}, {'figi': 'BBG00CSJ8ZX9', 'ticker': 'RU000A0JWG05', 'isin': 'RU000A0JWG05', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'X5 выпуск 6'}, {'figi': 'BBG00PYL6030', 'ticker': 'RU000A100L63', 'isin': 'RU000A100L63', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Белуга Групп выпуск 1'}, {'figi': 'BBG006R7MJT4', 'ticker': 'RU000A0JUQH4', 'isin': 'RU000A0JUQH4', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Республика Якутия выпуск 6'}, {'figi': 'BBG00QKHK9J0', 'ticker': 'RU000A100XC2', 'isin': 'RU000A100XC2', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Полюс ПБО-1'}, {'figi': 'BBGHUYNYA008', 'ticker': 'RU000A100741', 'isin': 'RU000A100741', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Трейдберри выпуск 1'}, {'figi': 'BBG00HT45YG5', 'ticker': 'RU000A0ZYCD1', 'isin': 'RU000A0ZYCD1', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Курская область выпуск 1'}, {'figi': 'BBGHUYNYA011', 'ticker': 'RU000A100Q76', 'isin': 'RU000A100Q76', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Каскад выпуск 1'}, {'figi': 'BBG00N8J90K7', 'ticker': 'SU26226RMFS9', 'isin': 'RU000A0ZZYW2', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 26226'}, {'figi': 'BBG0080SP636', 'ticker': 'SU29011RMFS2', 'isin': 'RU000A0JV7J9', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 29011'}, {'figi': 'BBG00HZ0R8T5', 'ticker': 'RU000A0ZYCR1', 'isin': 'RU000A0ZYCR1', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ТрансКомплектХолдинг выпуск 1'}, {'figi': 'BBG001FC93H0', 'ticker': 'NVTK0221', 'isin': 'XS0588433267', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'USD', 'name': 'Novatek'}, {'figi': 'BBG005HGBVN8', 'ticker': 'RU000A0JU8W1', 'isin': 'RU000A0JU8W1', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'МКБ выпуск 7'}, {'figi': 'BBG00GW0RM55', 'ticker': 'RU000A0JXTH2', 'isin': 'RU000A0JXTH2', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Каркаде выпуск 3'}, {'figi': 'BBG005JXJ308', 'ticker': 'RU000A0JU9G2', 'isin': 'RU000A0JU9G2', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Ставропольский край выпуск 2'}, {'figi': 'BBG00CLH6F48', 'ticker': 'RU000A0JWDU1', 'isin': 'RU000A0JWDU1', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ЕвроХим выпуск 1'}, {'figi': 'BBG00GQQPXL5', 'ticker': 'RU000A0JXRX3', 'isin': 'RU000A0JXRX3', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Лента БО-001P выпуск 1'}, {'figi': 'BBG00B9PJ2D1', 'ticker': 'SU26217RMFS8', 'isin': 'RU000A0JVW30', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 26217'}, {'figi': 'BBG00CXL26S4', 'ticker': 'RU000A0JWH46', 'isin': 'RU000A0JWH46', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Сбербанк выпуск 18'}, {'figi': 'BBG00HTR61W7', 'ticker': 'RU000A0ZYC98', 'isin': 'RU000A0ZYC98', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'МегаФон БО-1 выпуск 3'}, {'figi': 'BBGHUYNYA015', 'ticker': 'RU000A100VS2', 'isin': 'RU000A100VS2', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Атомстройкомплекс выпуск\xa01'}, {'figi': 'BBG00MXJP9Y9', 'ticker': 'RU000A0ZZZN8', 'isin': 'RU000A0ZZZN8', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Соллерс-финанс БО-П выпуск 1'}, {'figi': 'BBG00QG1PSL0', 'ticker': 'RU000A100VQ6', 'isin': 'RU000A100VQ6', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Норильский Никель БО-001Р выпуск\xa01'}, {'figi': 'BBG002RVD9Y6', 'ticker': 'RU000A0JS5F6', 'isin': 'RU000A0JS5F6', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ВымпелКом выпуск 4'}, {'figi': 'BBG00PVB9CH1', 'ticker': 'RU000A100JE7', 'isin': 'RU000A100JE7', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Балтийский лизинг БО-П02'}, {'figi': 'BBG004XQ1QY1', 'ticker': 'RU000A0JU2H5', 'isin': 'RU000A0JU2H5', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Самарская область 2013'}, {'figi': 'BBG00JB187V5', 'ticker': 'RU000A0ZYLD2', 'isin': 'RU000A0ZYLD2', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'СофтЛайн Трейд выпуск 1'}, {'figi': 'BBG00425VG07', 'ticker': 'SU26212RMFS9', 'isin': 'RU000A0JTK38', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 26212'}, {'figi': 'BBG009J6Q4B7', 'ticker': 'SU52001RMFS3', 'isin': 'RU000A0JVMH1', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 52001'}, {'figi': 'BBG00D6Q7LY6', 'ticker': 'SU26219RMFS4', 'isin': 'RU000A0JWM07', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 26219'}, {'figi': 'BBG00N8SH448', 'ticker': 'RU000A100303', 'isin': 'RU000A100303', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Нафтатранс Плюс выпуск\xa01'}, {'figi': 'BBG0018BT486', 'ticker': 'XS0554659671', 'isin': 'XS0554659671', 'minPriceIncrement': 1e-06, 'lot': 1, 'currency': 'USD', 'name': 'LUKOIL 6 1/8 11/09/20'}, {'figi': 'BBG00FZBQ7Q1', 'ticker': 'RU000A0JXFC2', 'isin': 'RU000A0JXFC2', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Соллерс-финанс выпуск 1'}, {'figi': 'BBG00KHR8SP0', 'ticker': 'RU000A0ZZ1J8', 'isin': 'RU000A0ZZ1J8', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ГТЛК выпуск 9'}, {'figi': 'BBG00PM8S500', 'ticker': 'RU000A100HE1', 'isin': 'RU000A100HE1', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Азбука Вкуса выпуск 1'}, {'figi': 'BBG00LJN0VY6', 'ticker': 'RU000A0ZZEW4', 'isin': 'RU000A0ZZEW4', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Альфа-Банк 002Р выпуск 1'}, {'figi': 'BBG00B52KN20', 'ticker': 'RU000A0JVUH4', 'isin': 'RU000A0JVUH4', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Республика Хакасия выпуск 5'}, {'figi': 'BBG00MC4V6W6', 'ticker': 'RU000A0ZZRB0', 'isin': 'RU000A0ZZRB0', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'АльфаБанк 002Р выпуск 2'}, {'figi': 'BBG0059KPSD1', 'ticker': 'RU000A0JU5S5', 'isin': 'RU000A0JU5S5', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ГТЛК выпуск 1'}, {'figi': 'BBG00GNH9FG1', 'ticker': 'RU000A0JXR43', 'isin': 'RU000A0JXR43', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Республика Якутия выпуск 9'}, {'figi': 'BBG00K53DJP0', 'ticker': 'SU26223RMFS6', 'isin': 'RU000A0ZYU88', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 26223'}, {'figi': 'BBG00FP0FL23', 'ticker': 'RU000A0JX3X7', 'isin': 'RU000A0JX3X7', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ХК Финанс выпуск 1'}, {'figi': 'BBG0035DDKL7', 'ticker': 'XS0800817073', 'isin': 'XS0800817073', 'minPriceIncrement': 0.0001, 'lot': 1, 'currency': 'USD', 'name': 'VEB'}, {'figi': 'BBG00GGS6C84', 'ticker': 'RU000A0JXPG2', 'isin': 'RU000A0JXPG2', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ГТЛК выпуск 4'}, {'figi': 'BBG00HVY2MS2', 'ticker': 'RU000A0ZYCM2', 'isin': 'RU000A0ZYCM2', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Красноярский край  выпуск 13'}, {'figi': 'BBG00GKQR8Z9', 'ticker': 'RU000A0JXQ51', 'isin': 'RU000A0JXQ51', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Автобан-Финанс выпуск 1'}, {'figi': 'BBG00BDZ8L62', 'ticker': 'RU000A0JVYN4', 'isin': 'RU000A0JVYN4', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ОГК-2 выпуск 1'}, {'figi': 'BBG003LQ7J76', 'ticker': 'RU000A0JT965', 'isin': 'RU000A0JT965', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Роснефть выпуск 5'}, {'figi': 'BBG00F5FK1W7', 'ticker': 'RU000A0JWXQ7', 'isin': 'RU000A0JWXQ7', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Республика Хакасия выпуск 6'}, {'figi': 'BBG00HY5JWH4', 'ticker': 'RU000A0ZYDU3', 'isin': 'RU000A0ZYDU3', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Свердловская область выпуск 4'}, {'figi': 'BBG00445QP01', 'ticker': 'RU000A0JTM44', 'isin': 'RU000A0JTM44', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Башнефть выпуск 8'}, {'figi': 'BBG00GVJ89G3', 'ticker': 'RU000A0JXTQ3', 'isin': 'RU000A0JXTQ3', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'РусГидро выпуск 5'}, {'figi': 'BBG00JKX1H22', 'ticker': 'RU000A0ZYL22', 'isin': 'RU000A0ZYL22', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Карачаево-Черкесская республика выпуск 1'}, {'figi': 'BBG004336TS1', 'ticker': 'XS0885733153', 'isin': 'XS0885733153', 'minPriceIncrement': 0.0001, 'lot': 200, 'currency': 'USD', 'name': 'GAZPRU 3.85 02/06/20'}, {'figi': 'BBG00JRTXBC1', 'ticker': 'RU000A0ZYNY4', 'isin': 'RU000A0ZYNY4', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ГТЛК выпуск 7'}, {'figi': 'BBG001MC0Q71', 'ticker': 'SU26205RMFS3', 'isin': 'RU000A0JREQ7', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 26205'}, {'figi': 'BBG00MRPMWZ3', 'ticker': 'RU000A0ZZX35', 'isin': 'RU000A0ZZX35', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ПР-Лизинг выпуск 2'}, {'figi': 'BBG00NQBGZX5', 'ticker': 'SU26227RMFS7', 'isin': 'RU000A1007F4', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 26227'}, {'figi': 'BBG00GVWVZW2', 'ticker': 'RU000A0JXT17', 'isin': 'RU000A0JXT17', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Балтийский лизинг БО-ПО1'}, {'figi': 'BBG00JKWL7Y9', 'ticker': 'RU000A0ZYML3', 'isin': 'RU000A0ZYML3', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Московская область выпуск 11'}, {'figi': 'BBG00NTXZ6S3', 'ticker': 'RU000A1008V9', 'isin': 'RU000A1008V9', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Роснано выпуск 8'}, {'figi': 'BBG00NN90XV7', 'ticker': 'XS1964558339', 'isin': 'XS1964558339', 'minPriceIncrement': 0.0001, 'lot': 1, 'currency': 'USD', 'name': 'Credit Bank of Moscow'}, {'figi': 'BBG00GLN8YP0', 'ticker': 'RU000A0JXQJ4', 'isin': 'RU000A0JXQJ4', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ЭР-Телеком выпуск 3'}, {'figi': 'BBG004MCR1T7', 'ticker': 'RU000A0JTY40', 'isin': 'RU000A0JTY40', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Зенит Банк выпуск 10'}, {'figi': 'BBG00NB4Q7S4', 'ticker': 'RU000A1003L1', 'isin': 'RU000A1003L1', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Фольксваген Банк РУС 001P выпуск 3'}, {'figi': 'BBG00GF6BJZ2', 'ticker': 'RU000A0JXN21', 'isin': 'RU000A0JXN21', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'АФК Система выпуск 6'}, {'figi': 'BBG002Q8G0K9', 'ticker': 'SU26208RMFS7', 'isin': 'RU000A0JS4M5', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 26208'}, {'figi': 'BBG00PT0ZT82', 'ticker': 'RU000A100MG6', 'isin': 'RU000A100MG6', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Сэтл Групп выпуск\xa02'}, {'figi': 'BBG00QPG1GD8', 'ticker': 'RU000A100YG1', 'isin': 'RU000A100YG1', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ГК Самолет выпуск\xa07'}, {'figi': 'BBG00DF1RSW6', 'ticker': 'RU000A0JWNE4', 'isin': 'RU000A0JWNE4', 'minPriceIncrement': 0.0001, 'lot': 1, 'currency': 'USD', 'name': 'VEB'}, {'figi': 'BBG00GXKBLW9', 'ticker': 'RU000A0JXTN0', 'isin': 'RU000A0JXTN0', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Банк Открытие БО-П выпуск 3'}, {'figi': 'BBG00Q214T90', 'ticker': 'RU000A100PM7', 'isin': 'RU000A100PM7', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'РСГ-Финанс выпуск 11'}, {'figi': 'BBG00NJ6WJ44', 'ticker': 'RU000A1005Y9', 'isin': 'RU000A1005Y9', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Рольф Выпуск 1'}, {'figi': 'BBG00HY74TD7', 'ticker': 'RU000A0ZYDH0', 'isin': 'RU000A0ZYDH0', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ФСК ЕЭС БО-3'}, {'figi': 'BBG00GMB0S58', 'ticker': 'RU000A0JXQD7', 'isin': 'RU000A0JXQD7', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Транснефть ПАО БО-001P-07'}, {'figi': 'BBG00KFLDC92', 'ticker': 'SU52002RMFS1', 'isin': 'RU000A0ZYZ26', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 52002'}, {'figi': 'BBG007B0ZC88', 'ticker': 'RU000A0JUWK6', 'isin': 'RU000A0JUWK6', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Воронежская область выпуск 7'}, {'figi': 'BBG00HYXLFQ7', 'ticker': 'RU000A0ZYEB1', 'isin': 'RU000A0ZYEB1', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ТрансФин-М 001Р выпуск 4'}, {'figi': 'BBG00PSQX526', 'ticker': 'RU000A100KL0', 'isin': 'RU000A100KL0', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Русал Братск БО-001Р выпуск 2'}, {'figi': 'BBG006NSC5X8', 'ticker': 'RU000A0JUP89', 'isin': 'RU000A0JUP89', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Волгоградская область выпуск 5'}, {'figi': 'BBG00PCD8BF3', 'ticker': 'RU000A100ER0', 'isin': 'RU000A100ER0', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'РОСНАНО БО-002P-01'}, {'figi': 'BBG00Q41F4Y3', 'ticker': 'RU000A100RS0', 'isin': 'RU000A100RS0', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ТЕХНО Лизинг выпуск\xa02'}, {'figi': 'BBG00N9S8LL0', 'ticker': 'RU000A1003N7', 'isin': 'RU000A1003N7', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Фридом Финанс выпуск 1'}, {'figi': 'BBG009SZTW91', 'ticker': 'RU000A0JVPR3', 'isin': 'RU000A0JVPR3', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Нижегородская область выпуск 10'}, {'figi': 'BBG00H1G7463', 'ticker': 'RU000A0JXU71', 'isin': 'RU000A0JXU71', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Внешэкономбанк ПБО-001Р-09'}, {'figi': 'BBG00GCQZZR8', 'ticker': 'RU000A0JXMQ8', 'isin': 'RU000A0JXMQ8', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Россельхозбанк (АО) БО-01P'}, {'figi': 'BBG00J3T6HB5', 'ticker': 'RU000A0ZYEE5', 'isin': 'RU000A0ZYEE5', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ГПБ (АО) БО-17'}, {'figi': 'BBG00F6NKMM4', 'ticker': 'RU000A0JWYK8', 'isin': 'RU000A0JWYK8', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Полипласт выпуск 3'}, {'figi': 'BBG00DB42X41', 'ticker': 'XS1449458915', 'isin': 'XS1449458915', 'minPriceIncrement': 0.0001, 'lot': 200, 'currency': 'USD', 'name': 'GTLK'}, {'figi': 'BBG00MH74BJ8', 'ticker': 'RU000A0ZZT80', 'isin': 'RU000A0ZZT80', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Уралкалий выпуск 5'}, {'figi': 'BBG00HZ418L3', 'ticker': 'RU000A0ZYCZ4', 'isin': 'RU000A0ZYCZ4', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Республика Карелия выпуск 18'}, {'figi': 'BBG00LNNQHC8', 'ticker': 'RU000A0ZZGE7', 'isin': 'RU000A0ZZGE7', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Фольксваген Банк РУС 001P выпуск 2'}, {'figi': 'BBG00GGR5VM9', 'ticker': 'RU000A0JXPM0', 'isin': 'RU000A0JXPM0', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ЛСР выпуск 2'}, {'figi': 'BBG0015TLLG1', 'ticker': 'RU000A0JR0J0', 'isin': 'RU000A0JR0J0', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Мечел выпуск\xa014'}, {'figi': 'BBG00QYKX940', 'ticker': 'RU000A1012K4', 'isin': 'RU000A1012K4', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'СЭЗ им. Серго Орджоникидзе'}, {'figi': 'BBG00PVTK9T3', 'ticker': 'RU000A100GK0', 'isin': 'RU000A100GK0', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'МигКредит выпуск\xa01'}, {'figi': 'BBG00BQZW6R1', 'ticker': 'RU000A0JW1K9', 'isin': 'RU000A0JW1K9', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Томская область выпуск 55'}, {'figi': 'BBG00PVVTDW6', 'ticker': 'RU000A100K64', 'isin': 'RU000A100K64', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Апри Флай Плэнинг 2 выпуск'}, {'figi': 'BBG00Q2FD966', 'ticker': 'SU24020RMFS8', 'isin': 'RU000A100QS2', 'minPriceIncrement': 0.001, 'lot': 1, 'currency': 'RUB', 'name': 'ОФЗ 24020'}, {'figi': 'BBG00GH62KJ5', 'ticker': 'RU000A0JXQ28', 'isin': 'RU000A0JXQ28', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'ФПК выпуск 1'}, {'figi': 'BBG00PC4M4X3', 'ticker': 'RU000A100DG5', 'isin': 'RU000A100DG5', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'Европлан выпуск 6'}, {'figi': 'BBG00GK3W839', 'ticker': 'RU000A0JXQ44', 'isin': 'RU000A0JXQ44', 'minPriceIncrement': 0.01, 'lot': 1, 'currency': 'RUB', 'name': 'РЖД 001Р выпуск 2'}], 'total': 399}, 'status': 'Ok'}
+
