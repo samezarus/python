@@ -50,3 +50,6 @@ Orders
 Operations
 
 	apiURL + '/operations' + q.Encode()
+
+
+зы: Кому интересно и есть идеи, пишите в телегу https://t.me/sameza
