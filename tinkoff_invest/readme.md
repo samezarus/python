@@ -19,6 +19,14 @@ Portfolio
 Market
 
 	apiURL + '/market'
+	
+	apiURL + '/market/bonds'
+	
+	apiURL + '/market/currencies'
+	
+	apiURL + '/market/etfs'
+	
+	apiURL + '/market/stocks'
 
 Orders
 
