@@ -27,6 +27,8 @@ Market
 	apiURL + '/market/etfs'
 	
 	apiURL + '/market/stocks'
+	
+	apiURL + '/market/search/by-figi?figi=' + figi
 
 Orders
 
