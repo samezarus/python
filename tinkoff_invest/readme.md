@@ -12,6 +12,8 @@ apiURL = 'https://api-invest.tinkoff.ru/openapi'
 
 figi - айдишник инструмента(акции/облигации) в системе (список доступных можно получить через '/market/stocks')
 
+(figi: COCA-COLA: BBG000BMX289)
+
 ticker - краткое наименование инструиента
 
 Portfolio
