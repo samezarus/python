@@ -28,9 +28,9 @@ Market
 	
 	apiURL + '/market/etfs'
 	
-	apiURL + '/market/stocks' - доступные инструменты(акции/облигации)
+	apiURL + '/market/stocks' - доступные инструменты
 	
-	apiURL + '/market/search/by-figi?figi=' + figi
+	apiURL + '/market/search/by-figi?figi=' + figi - поиск инструмента по figi
 	
 	apiURL + '/market/search/by-ticker?ticker=' + ticker
 	
