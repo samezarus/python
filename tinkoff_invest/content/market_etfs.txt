@@ -1,0 +1,194 @@
+﻿# apiURL = 'https://api-invest.tinkoff.ru/openapi'
+# apiURL + 'market/etfs'
+
+{
+    'trackingId': '...',
+    'payload':
+        {
+            'instruments':
+                [
+                    {
+                        'figi': 'BBG005HM5979',
+                        'ticker': 'FXJP',
+                        'isin': 'IE00BD3QJ310',
+                        'minPriceIncrement': 1.0,
+                        'lot': 1,
+                        'currency': 'RUB',
+                        'name': 'Акции японских компаний'
+                    },
+                    {
+                        'figi': 'BBG006GYFHV6',
+                        'ticker': 'FXMM',
+                        'isin': 'IE00BL3DYX33',
+                        'minPriceIncrement': 0.1,
+                        'lot': 1,
+                        'currency': 'RUB',
+                        'name': 'Казначейские облигации США'
+                    },
+                    {
+                        'figi': 'BBG005DXDPK9',
+                        'ticker': 'FXGD',
+                        'isin': 'IE00B8XB7377',
+                        'minPriceIncrement': 0.2,
+                        'lot': 1,
+                        'currency': 'RUB',
+                        'name': 'Золото'
+                    },
+                    {
+                        'figi': 'BBG00KMXFK61',
+                        'ticker': 'RUSE',
+                        'isin': 'LU1483649312',
+                        'minPriceIncrement': 0.5,
+                        'lot': 1,
+                        'currency': 'RUB',
+                        'name': 'Акции российских компаний, входящие в индекс РТС'
+                    },
+                    {
+                        'figi': 'BBG005H7MXN2',
+                        'ticker': 'FXDE',
+                        'isin': 'IE00BD3QJN10',
+                        'minPriceIncrement': 0.5,
+                        'lot': 1,
+                        'currency': 'RUB',
+                        'name': 'Акции немецких компаний'
+                    },
+                    {
+                        'figi': 'BBG00M8C8Y03',
+                        'ticker': 'FXKZ',
+                        'isin': 'IE00BG0C3K84',
+                        'minPriceIncrement': 0.1,
+                        'lot': 1,
+                        'currency': 'RUB',
+                        'name': 'Акции казахстанских компаний'
+                    },
+                    {
+                        'figi': 'BBG005VKB7D7',
+                        'ticker': 'FXCN',
+                        'isin': 'IE00BD3QFB18',
+                        'minPriceIncrement': 2.0,
+                        'lot': 1,
+                        'currency': 'RUB',
+                        'name': 'Акции китайских компаний'
+                    },
+                    {
+                        'figi': 'BBG000000000',
+                        'ticker': 'TUSD',
+                        'isin': 'RU000A1011S9',
+                        'minPriceIncrement': 0.0001,
+                        'lot': 1,
+                        'currency': 'USD',
+                        'name': 'Вечный портфель USD'
+                    },
+                    {
+                        'figi': 'BBG000000002',
+                        'ticker': 'TEUR',
+                        'isin': 'RU000A1011T7',
+                        'minPriceIncrement': 0.0001,
+                        'lot': 1,
+                        'currency': 'EUR',
+                        'name': 'Вечный портфель EUR'
+                    },
+                    {
+                        'figi': 'BBG000000001',
+                        'ticker': 'TRUR',
+                        'isin': 'RU000A1011U5',
+                        'minPriceIncrement': 0.005,
+                        'lot': 1,
+                        'currency': 'RUB',
+                        'name': 'Вечный портфель RUB'
+                    },
+                    {
+                        'figi': 'BBG00KMXH2C2',
+                        'ticker': 'RUSB',
+                        'isin': 'LU1483649825',
+                        'minPriceIncrement': 2.0,
+                        'lot': 1,
+                        'currency': 'RUB',
+                        'name': 'Долларовые еврооблигации российских эмитентов'
+                    },
+                    {
+                        'figi': 'BBG00NNQMD85',
+                        'ticker': 'AKNX',
+                        'isin': 'RU000A0ZZTQ4',
+                        'minPriceIncrement': 0.01,
+                        'lot': 1,
+                        'currency': 'USD',
+                        'name': 'Технологии 100 БПИФ'
+                    },
+                    {
+                        'figi': 'BBG005HLSZ23',
+                        'ticker': 'FXUS',
+                        'isin': 'IE00BD3QHZ91',
+                        'minPriceIncrement': 1.0,
+                        'lot': 1,
+                        'currency': 'RUB',
+                        'name': 'Акции американских компаний'
+                    },
+                    {
+                        'figi': 'BBG0073DLHS1',
+                        'ticker': 'FXRL',
+                        'isin': 'IE00BQ1Y6480',
+                        'minPriceIncrement': 0.5,
+                        'lot': 1,
+                        'currency': 'RUB',
+                        'name': 'Акции российских компаний'
+                    },
+                    {
+                        'figi': 'BBG005HLTYH9',
+                        'ticker': 'FXIT',
+                        'isin': 'IE00BD3QJ757',
+                        'minPriceIncrement': 1.0,
+                        'lot': 1,
+                        'currency': 'RUB',
+                        'name': 'Акции компаний IT-сектора США'
+                    },
+                    {
+                        'figi': 'BBG005HM6BL7',
+                        'ticker': 'FXAU',
+                        'isin': 'IE00BD3QF110',
+                        'minPriceIncrement': 1.0,
+                        'lot': 1,
+                        'currency': 'RUB',
+                        'name': 'Акции австралийских компаний'
+                    },
+                    {
+                        'figi': 'BBG005N1KZX4',
+                        'ticker': 'FXRU',
+                        'isin': 'IE00BD5FH213',
+                        'minPriceIncrement': 0.1,
+                        'lot': 1,
+                        'currency': 'RUB',
+                        'name': 'Еврооблигации российских компаний (USD)'
+                    },
+                    {
+                        'figi': 'BBG004HNZFH2',
+                        'ticker': 'FXRB',
+                        'isin': 'IE00B7L7CP77',
+                        'minPriceIncrement': 1.0,
+                        'lot': 1,
+                        'currency': 'RUB',
+                        'name': 'Еврооблигации российских компаний (RUB)'
+                    },
+                    {
+                        'figi': 'BBG00NRFC2X2',
+                        'ticker': 'FXTB',
+                        'isin': 'IE00BL3DYW26',
+                        'minPriceIncrement': 0.1,
+                        'lot': 1,
+                        'currency': 'RUB',
+                        'name': 'Казначейские облигации США (USD)'
+                    },
+                    {
+                        'figi': 'BBG005HLK5V5',
+                        'ticker': 'FXUK',
+                        'isin': 'IE00BD3QHV53',
+                        'minPriceIncrement': 1.0,
+                        'lot': 1,
+                        'currency': 'RUB',
+                        'name': 'Акции английских компаний'
+                    }
+                ],
+            'total': 20
+        },
+    'status': 'Ok'
+}
