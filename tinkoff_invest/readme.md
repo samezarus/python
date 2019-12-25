@@ -36,7 +36,7 @@ Market
 	
 	apiURL + '/market/search/by-ticker?ticker=' + ticker - поиск инструмента
 	
-	apiURL + '/market/candles?' + q.Encode()
+	apiURL + '/market/candles?' + q.Encode() - свечи
 	
 	apiURL + '/market/orderbook?' + q.Encode()
 	
