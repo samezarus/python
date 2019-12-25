@@ -10,6 +10,8 @@
 
 apiURL = 'https://api-invest.tinkoff.ru/openapi'
 
+figi - айдишник инструмента(акции/облигации) в системе
+
 Portfolio
 
 	apiURL + '/portfolio'
