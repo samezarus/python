@@ -2,6 +2,8 @@
 
 Да. Да. Есть неофициальный API (python) но вот мануалов для него я не нашёл. 
 
+	Вру, нашёл https://tinkoffcreditsystems.github.io/invest-openapi/swagger-ui/#/market/get_market_candles
+
 Разбираться - это не мой путь. За основу возьму исходники на GO, т.к. они более лаконичные https://github.com/TinkoffCreditSystems/invest-openapi-go-sdk
 
 Собственно всё сводится к простой отправке GET-запросов, и получения на них JSON-ответов.
