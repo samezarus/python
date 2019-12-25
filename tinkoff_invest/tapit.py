@@ -3,6 +3,14 @@
 
 import httplib2
 import json
+from datetime import datetime, timedelta
+from pytz import timezone
+#
+def dtToUrlFormat(dtStr):
+    result = str(dtStr).replace(':', '%3A')
+    result = result.replace('+', '%2B')
+    return result
+
 #
 class httpResult():
     resp    = ''
