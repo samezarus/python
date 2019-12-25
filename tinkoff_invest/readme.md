@@ -12,6 +12,8 @@ apiURL = 'https://api-invest.tinkoff.ru/openapi'
 
 figi - айдишник инструмента(акции/облигации) в системе
 
+ticker - краткое наименование инструиента
+
 Portfolio
 
 	apiURL + '/portfolio'
@@ -30,9 +32,9 @@ Market
 	
 	apiURL + '/market/stocks' - доступные инструменты
 	
-	apiURL + '/market/search/by-figi?figi=' + figi - поиск инструмента по figi
+	apiURL + '/market/search/by-figi?figi=' + figi - поиск инструмента
 	
-	apiURL + '/market/search/by-ticker?ticker=' + ticker
+	apiURL + '/market/search/by-ticker?ticker=' + ticker - поиск инструмента
 	
 	apiURL + '/market/candles?' + q.Encode()
 	
