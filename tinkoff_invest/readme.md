@@ -29,12 +29,22 @@ Market
 	apiURL + '/market/stocks'
 	
 	apiURL + '/market/search/by-figi?figi=' + figi
-
+	
+	apiURL + '/market/search/by-ticker?ticker=' + ticker
+	
+	apiURL + '/market/candles?' + q.Encode()
+	
+	apiURL + '/market/orderbook?' + q.Encode()
+	
 Orders
 
 	apiURL + '/orders'
-
+	
+	apiURL + '/orders/cancel?orderId=' + id
+	
+	apiURL + '/orders/limit-order?figi=' + figi
+	
+	
 Operations
 
 	apiURL + '/operations'
-
