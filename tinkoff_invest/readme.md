@@ -55,7 +55,7 @@ Orders
 	
 Operations
 
-	apiURL + '/operations' + q.Encode()
+	apiURL + '/operations?from=' + fromDate + '&to=' + toDate + '&figi=' + figi
 
 
 зы: Кому интересно и есть идеи, пишите в телегу https://t.me/sameza
