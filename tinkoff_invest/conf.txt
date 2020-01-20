@@ -1,3 +1,12 @@
 {
-    "token":"<trade token>"
+    "token":"<token>",
+    "percentageCommission":0.05,
+    "db":
+        {
+            "host":"localhost",
+            "port":27017,
+            "name":"tnkf_invest",
+            "user":"",
+            "pass":""
+        }
 }
